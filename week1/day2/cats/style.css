@@ -1,0 +1,32 @@
+.undrln{
+    text-decoration: underline;
+}
+
+.tacenter{
+    text-align: center;
+}
+
+th{
+    color: red;
+    border: 1px solid;
+}
+
+td{
+    border: 1px solid;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+table{
+    margin-top: 70px;
+}
+
+thead{
+    position: relative;
+    top: -20px;
+}
+
+#lion{
+    width: 500px;
+    border: 10px solid#ff5050;
+}

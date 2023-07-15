@@ -1,0 +1,52 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, body {
+  margin:0;
+  padding:0;
+}
+
+li{
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+ul {
+    float: right;
+    margin: 22px 50px 0 0;
+}
+
+h1{
+    text-transform: uppercase;
+    font-size: 70px;
+}
+
+header{
+    background-color: #353535;
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    color: #fff;
+}
+
+.thor{
+    background-image: url(img/168069577-2f570d08-61d3-49d8-b7dd-c4b9192aaf68.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.content{
+    width: 700px;
+    margin-top: 20%;
+    margin-left: 150px;
+    position: absolute;
+}
+
+.logo{
+    height: 50px;
+    margin: 6px 0 0 50px;
+}
