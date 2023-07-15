@@ -1,0 +1,22 @@
+.sbmtbtn, input{
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+    height: 30px;
+    padding: 5px 10px;
+}
+
+.sbmtbtn{
+    color: #fff;
+    height: 40px;
+    background-color: #0075e5;
+    border: none;
+    border-radius: 10px;
+    box-sizing: content-box;
+}
+
+.signup_form{
+
+    max-width: 250px;
+    margin: auto;
+}
