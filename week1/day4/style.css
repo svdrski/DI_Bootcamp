@@ -1,0 +1,126 @@
+body, h1, h2, p, h3, h4, hr{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+p{
+    font-weight: 300;
+}
+
+h1{
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+h2{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 20px;
+}
+
+.hr{
+    width: 40px;
+    position: relative;
+    display: block;
+    height: 4px;
+    border: none;
+    background-color: #e2d600;
+    margin: 10px 0 20px;
+}
+
+.thname{
+    font-weight: 200;
+}
+
+.descript{
+    margin-top: 15px;
+    font-weight: 300;
+    color: #8f8f8f;
+}
+
+section{
+    width: 900px;
+    padding: 40px 80px;
+    background-color: #fbfbfb;
+}
+
+.name{
+    display: inline-block;
+}
+
+.photo{
+    display: inline-block;
+}
+
+.profphoto{
+    height: 140px;
+    border-bottom: 10px solid#e4d800;
+    float: right;
+}
+
+.nameb{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+.contfield{
+    display: flex;
+    margin-top: 15px;
+}
+
+.dimg{
+    height: 25px;
+    margin-right: 10px;
+}
+
+.eddescr{
+    font-size: 14px;
+    color: #909090;
+}
+
+.education{
+    margin-top: 40px;
+    width: 170px;
+}
+
+.eddeg{
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.separator{
+    width: 15px;
+    background-color: #d9d9d9;
+    margin: 0 30px;
+}
+
+.contentarea{
+    display: flex;
+}
+
+.contactb{
+    width: 300px;
+    margin-top: 50px;
+}
+
+.profdesc{
+    color: #535353;
+}
+
+.workinfo{
+    font-weight: 500;
+    color: #8e8e8e;
+    margin: 10px 0 5px 0;
+}
+
+.profile{
+    margin-top: 50px;
+    width: 670px;
+}
+
+.workex, .contactb{
+    margin-top: 50px;
+}
