@@ -1,0 +1,125 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+h1{
+    text-align: center;
+}
+
+.formcol{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.mlhbutn{
+    
+    margin-left: 20px;
+
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    grid-column: 1 / 4;
+}
+
+ul li:before {
+    content:  "—";
+    position: relative;
+    left:     -5px;
+}
+
+
+
+label{
+    margin-top: 10px;
+}
+
+.inpt{
+    height: 30px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.content{
+    width: 70%;
+    margin: 0 auto;
+    
+}
+
+.back{
+    background-image: url(back.png);
+
+    padding: 40px 0;
+    margin-top: 20px;
+}
+
+.big{
+    grid-column: 1 / 4;
+    width: 100%;
+}
+
+.howman{
+    grid-column: 1 / 3;
+}
+
+.check{
+    display: flex;
+    grid-column: 1 / 4;
+}
+
+.download{
+    justify-self: center;
+    grid-column: 1 / 4;
+    height: 40px;
+    width: 180px;
+    background-color: #4accff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.download:hover{
+
+    background-color: #004246;
+    cursor: pointer;
+}
+
+header{
+    color: #fff;
+    background-color: #00757c;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    justify-content: center;
+}
+
+.hbutn{
+    background-color: #3e9cc0;
+    margin-left: 20px;
+}
+
+.field7{
+    grid-column: 1 / 4;
+}
+
+.Advertising{
+    grid-column: 1 / 4;
+}
+
+
+
+@media (max-width:629px){
+    .formcol{
+        grid-template-columns: 1fr;
+    }
+
+
+    .download, .check, .Advertising, ul, .field7{
+        grid-column: 1 / 1;
+    }
+}

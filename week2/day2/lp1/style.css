@@ -21,6 +21,7 @@ h5{
     background-image: url(img/pexels-sandra-filipe-7087668.jpg);
     background-size: cover;
     min-height: 100vh;
+    padding: 30px 0;
 }
 
 .digit{
@@ -36,7 +37,6 @@ h5{
     grid-template-rows: 60px 30px;
     text-align: center;
     margin-top: 70px;
-    
 }
 
 .card{
@@ -83,7 +83,7 @@ h5{
 }
 
 
-@media (max-width:600px) {
+@media (max-width:924px) {
 
     .features{
     grid-template-columns: 1fr;

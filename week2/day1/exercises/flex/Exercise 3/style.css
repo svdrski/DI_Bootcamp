@@ -1,0 +1,32 @@
+.child{
+    border: 1px solid;
+    width: 100%;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.parent{
+    display: flex;
+    height: 70px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.child1{
+    background-color: #0dc81c;
+    flex: 2;
+}
+
+.child2{
+    background-color: #238be7;
+    flex: 4;
+}
+
+.child3{
+    background-color: #e75e23;
+    flex: 4;
+}
