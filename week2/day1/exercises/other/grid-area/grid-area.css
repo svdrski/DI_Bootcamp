@@ -1,0 +1,35 @@
+:root{
+    --grid-gap:5px;
+}
+
+.wrapper{
+    height: 100vh;
+    display: grid;
+    grid-gap: var(--grid-gap);
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 30px auto 20px;
+    grid-template-areas:
+    "header header header header"
+    "sidebar content content content"
+    "footer footer footer footer"
+}
+
+header {
+    grid-area: header;
+    border: 1px solid;
+}
+
+article{
+    grid-area: content;
+    border: 1px solid;
+}
+
+aside{
+    grid-area: sidebar;
+    border: 1px solid;
+}
+
+footer{
+    grid-area: footer;
+    border: 1px solid;
+}
