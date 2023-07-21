@@ -1,0 +1,164 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(240, 240, 240);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+margin: 0;
+padding: 0;
+}
+
+nav{
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    padding: 0 40px;
+    height: 60px;
+}
+
+.navr{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.navr > a{
+    padding: 10px;
+    color: #000;
+}
+
+li{
+    display: inline-block;
+    padding: 6px;
+}
+
+.signin{
+    width: 80px;
+    height: 40px;
+    background-color: #fff;
+    color: #3c89cb;
+    font-weight: 600;
+    border: 1px solid#78c0ff;
+    border-radius: 5px;
+}
+
+
+.whiteb{
+    background-color: #fff;
+    text-align: center;
+    padding: 30px;
+}
+
+.whiteb > h3{
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-top: 20px;
+}
+
+.container{
+    max-width: 300px;
+    margin: 20px;
+
+}
+
+.complete{
+    font-style: italic;
+    font-size: 12px;
+    color: #909090;
+    margin: 5px 0 0 0;
+}
+
+.bigt{
+    font-size: 60px;
+    font-weight: 200;
+}
+
+.start{
+    width: 190px;
+    background-color: #00911e;
+    height: 40px;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.blueb{
+    background-color: #00529d;
+    color: #fff;
+    padding: 30px;
+}
+
+.blueb > ul{
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 20px 0;
+}
+
+.blueb > ul > li {
+    display: block;
+    font-weight: 300;
+    font-size: 13px;
+    padding-left: 0;
+}
+
+
+hr{
+    border: none;
+    background-color: #939393;
+    height: 1px;
+    margin-bottom: 20px;
+}
+
+.popular{
+    height: 20px;
+    background-color: #0070c1;
+    color: #fff;
+    text-align: center;
+    padding: 4px;
+    border-radius: 5px 5px 0 0;
+}
+
+.grid{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.heading{
+    text-align: center;
+    margin-top: 5%;
+}
+
+select{
+    height: 30px;
+    width: 120px;
+    text-align: center;
+    color: #1e95b9;
+    border-radius: 2px;
+    border: 1px solid#1e95b9;
+    margin-left: 10px;
+    
+}
+
+.price{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    align-items: center;
+}
+
+@media (max-width: 750px){
+    .grid{
+        align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+
+    nav > ul, nav > .navr{
+           display: none;
+    }
+}
