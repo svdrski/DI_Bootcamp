@@ -6,9 +6,13 @@ p{
     font-size: 14px;
 }
 
+h2{
+    font-weight: 300;
+}
+
 
 h3{
-    font-size: 15px;
+
     font-weight: 300;
 }
 
@@ -29,15 +33,30 @@ ul, li{
     margin: 0;
     padding: 0;
     list-style: none;
+    display: inline-block;
+}
+
+
+
+.about > ul > li {
+    background-color: #fff;
+    padding: 7px 15px;
+    border-radius: 50px;
+    margin: 5px;
+}
+
+.about > ul{
+    margin: 15px 0 0 -5px;
 }
 
 .block1{
-    background-color: black;
+    background-image: url(img/bckgr.jpg);
+    background-size: cover;
     color: #ffffff;
     border-radius: 20px;
-    margin: 20px;
+    margin: 3%;
     box-sizing: content-box;
-    height: calc(100vh - 40px);
+    height: 91vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,17 +86,22 @@ ul, li{
     width: 40%;
 }
 
+.hname{
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 2px;
+}
+
 .blockaboutme{
-    margin: 20px;
+    margin: 40px 0;
     box-sizing: content-box;
-    height: calc(50vh - 40px);
     display: grid;
-    grid-template-columns: 0.5fr 0.3fr 0.2fr;
+    grid-template-columns: 0.4fr 0.4fr 0.2fr;
     grid-gap: 20px;
 }
 
 .about1{
-background-image: url(img/v904-nunny-012.jpg);
+    background-color: #fafafa;
 background-size: cover;
 border-radius: 20px;
     
@@ -97,7 +121,7 @@ border-radius: 20px;
 
 .about{
     border-radius: 20px;
-    padding: 60px;
+    padding: 40px;
 }
 
 
@@ -112,4 +136,61 @@ border-radius: 20px;
 .pname{
     display: flex;
     align-items: center;
+}
+
+
+.portfolio{
+    margin: 3%;
+    border-radius: 20px;
+}
+
+.prodgrid{
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 300px 300px;
+    grid-gap: 20px;
+}
+
+.projblock{
+    background-image: url(img/original-854fd5984ae4e95cb0be7c472e8cc872.png);
+        border-radius: 20px;
+        background-size: cover;
+}
+
+.prh{
+    margin: 100px 0 50px 40px;
+}
+
+.prh2{
+    margin: 0px 0 50px 40px;
+}
+
+.blog > a{
+    color: #000;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.blog > p {
+    font-size: 14px;
+    color: #393939;
+    font-weight: 300;
+}
+
+.por2{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.mt0{
+    margin: 0;
+}
+
+@media (max-width:480px){
+    .blockaboutme, .prodgrid{
+        grid-template-columns: 1fr;
+    }
 }

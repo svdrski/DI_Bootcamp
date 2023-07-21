@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="132" height="132" viewBox="0 0 132 132">
+  <g id="Сгруппировать_3" data-name="Сгруппировать 3" transform="translate(-579 -53)">
+    <g id="Сгруппировать_2" data-name="Сгруппировать 2">
+      <g id="Сгруппировать_1" data-name="Сгруппировать 1">
+        <rect id="Прямоугольник_2" data-name="Прямоугольник 2" width="40" height="40" transform="translate(581 55)" fill="#f57c3c"/>
+        <rect id="Прямоугольник_5" data-name="Прямоугольник 5" width="40" height="40" transform="translate(669 99)" fill="#f57c3c"/>
+        <rect id="Прямоугольник_8" data-name="Прямоугольник 8" width="40" height="40" transform="translate(625 143)" fill="#f57c3c"/>
+        <rect id="Прямоугольник_3" data-name="Прямоугольник 3" width="40" height="40" transform="translate(625 55)" fill="#ffac80"/>
+        <rect id="Прямоугольник_11" data-name="Прямоугольник 11" width="40" height="40" transform="translate(581 99)" fill="#ffac80"/>
+        <rect id="Прямоугольник_9" data-name="Прямоугольник 9" width="40" height="40" transform="translate(669 143)" fill="#ffac80"/>
+        <rect id="Прямоугольник_4" data-name="Прямоугольник 4" width="40" height="40" transform="translate(669 55)" fill="#8d4520"/>
+        <rect id="Прямоугольник_7" data-name="Прямоугольник 7" width="40" height="40" transform="translate(625 99)" fill="#8d4520"/>
+        <rect id="Прямоугольник_10" data-name="Прямоугольник 10" width="40" height="40" transform="translate(581 143)" fill="#8d4520"/>
+      </g>
+    </g>
+    <g id="Прямоугольник_12" data-name="Прямоугольник 12" transform="translate(579 53)" fill="none" stroke="#fff" stroke-width="2">
+      <rect width="132" height="132" stroke="none"/>
+      <rect x="1" y="1" width="130" height="130" fill="none"/>
+    </g>
+  </g>
+</svg>
