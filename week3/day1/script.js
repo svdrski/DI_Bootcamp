@@ -1,90 +1,32 @@
-let x = 5, y = 7;
+1 == 1 
+
+1 == "1" // с двумя равно true пытается первести тип второго в тип первого
+
+1 === "1"  // false быстрее. не тратит время на перевод в первый
 
 
-console.log(x, y, x + y);
+"1" == 1 
 
-const color = "red";
-/* fcsafas */
+1 != 1 //false
 
-let firstName = "John";
-let secondName = "Sas"
+1 != "1" //false  второй переводит в первое
 
-let fullName = firstName + " " + secondName;
-
-console.log (fullName);
-
-let longString = " casfas  aasas as  as as assadsassad as" +
-"fasfasfs fsafasfasfas fsafas" + "dsafasf fsaf asfasfasfas";
-
-console.log(longString);
-
-console.log(longString.length);
-
-//номер символа или слова
-
-let pos = fullName.indexOf("Sas");
-console.log(pos);
-
-let posLast = longString.lastIndexOf("as");
-console.log(posLast);
-
-let posLast2 = longString.indexOf("ffvcxxzgh");
-console.log(posLast2);
+1 !== "2" // true  второй не переводит в первое
 
 
+//Split переводит строку в множество
+// с пробелом - разделить по словам, без ничего - разделить по символам
+
+let a = "a quick brown fox";
+
+let arr = a.split(" ");
+console.log(a);
+console.log(arr);
+
+let string = "A quick brown fox" //string to be split
+let array_of_strings = string.split("") //The split() function 
+
+console.log(string) //note that the split function doesn't change the original string
+console.log(array_of_strings)
 
 
-//search 
-
-let zoc = longString.search("as");
-console.log(zoc);
-
-
-//slice Обрезать и начать строку с номера символа
-
-let str = "Apple, Banana, Kiwi";
-let res = str.slice(2);
-let ress = str.slice(-2);
-let srb = str.slice(2, 4); //Начало и конец области вырезания
-
-let ooo = str.slice(str.length - "Banana".length)
-console.log(res, srb, ress);
-
-//substring
-// substr
-
-//replace замена 
-
-let stra = "Please visit microsoft";
-let newstr = stra.replace("microsoft", "Developers institute");
-console.log(newstr);
-
-
-//toUppercase()
-//toLowercase()
-
-console.log(newstr.toLowerCase());
-console.log(stra.toUpperCase());
-
-
-//Обьединение concat
-
-let txt1 = "Hello";
-let txt2 ="World";
-let txt5 = "!!!!!"
-let txt3 = txt1 + " " + txt2 + txt5;
-
-let txt4 = txt1.concat(" ", txt2, txt5);
-
-console.log(txt3, txt4);
-
-
-//trimLeft
-//trimRight
-//trim
-
-
-let sttr = "     hello     ";
-console.log(sttr.trimLeft());
-console.log(sttr.trimRight());
-console.log(sttr.trim());
