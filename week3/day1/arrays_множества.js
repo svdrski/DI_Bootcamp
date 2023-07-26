@@ -44,7 +44,7 @@ console.log(fruits);
 let f = fruits.pop();
 console.log(fruits, f);
 
-// Shift 
+// Shift  Удаляет первый элемент
 
 let g = fruits.shift();
 
@@ -74,3 +74,34 @@ console.log(p)
 
 // charAt выводит символ по порядковому номеру
 
+fruits.chart()
+
+
+// Сортировка по алфавиту 
+fruits.sort()
+
+
+// Перевернуть список с зада на перед
+fruits.reverse();
+
+
+
+// Алерт
+
+alert("Hello");
+
+// Алерт с полем ввода
+let age = prompt('How old are you?', 20); 
+alert(`You are ${age} years old!`);
+
+// Алерт с кнопками да / отмена (true false)
+
+let isBoss = confirm("Are you the boss?");
+alert(isBoss); // true if OK is pressed
+
+//substr Вырезает символы из строки 
+
+// const sub1 = str.substr(4);      // Извлечение всех символов, начиная с индекса 4: "Script is awesome!"
+//const sub2 = str.substr(0, 10);  // Извлечение 10 символов, начиная с индекса 0: "JavaScript"
+//const sub3 = str.substr(-7);     // Извлечение всех символов, начиная с предпоследнего и до конца: "awesome!"
+// const sub4 = str.substr(11, 2);  // Извлечение 2 символов, начиная с индекса 11: "is"
