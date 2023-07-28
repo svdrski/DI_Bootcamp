@@ -1,11 +1,23 @@
-let ask = prompt("give  a sentence containing the word “Nemo”");
-let arr = ask.split(" ");
-let nemoindex = arr.indexOf("Nemo");
+let num  = Number(prompt("type number"));
+
+let word = "boom"
+let buk = "o"
 
 
-if (nemoindex == -1) {
-    console.log("I can’t find Nemo");
-} else {
-    console.log("I found Nemo at", nemoindex);
+if (num < 2) {
+    console.log(word);
+} else if (num % 2 == 0 && num % 5 == 0 ) {
+    word = `B${buk.repeat(num)}m !`;
+    console.log(word.toUpperCase());
 }
+  else if (num % 2 == 0)  {
+    word = `B${buk.repeat(num)}m !`;
+   console.log( word);
+} else if (num % 5 == 0 )  {
+    console.log(word.toUpperCase());
+}  else if (num > 2 && num !== 5) {
+    word = `B${buk.repeat(num)}m`;
+    console.log( word);
+}
+
 

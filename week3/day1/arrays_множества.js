@@ -112,3 +112,7 @@ alert(isBoss); // true if OK is pressed
 let input = prompt("Type  numbers separated by commas");
 
 let array = input.split(",");
+
+
+//  .join("") Переводит множество в строку и удаляет запятые 
+secretName =  secretName.join("");
