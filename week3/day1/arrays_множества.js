@@ -115,4 +115,73 @@ let array = input.split(",");
 
 
 //  .join("") Переводит множество в строку и удаляет запятые 
+
 secretName =  secretName.join("");
+
+//Фильтр с помощью или возвращает true
+
+
+var person = {
+  name: 'Jack',
+  age: 34
+}
+console.log(person.job || 'unemployed');
+// 'unemployed'
+
+
+// с помощью && возвращает false
+
+var person = {
+  name: 'Jack',
+  age: 34
+}
+console.log(person.age > 18 && 'Driving allowed');
+//Подводя итог, для практических приложений мы можем использовать ORоператор для установки значений по умолчанию, и мы можем использовать ANDоператор для выполнения кода во втором операнде, если первый является истинным.
+
+
+
+//Cинтаксис доступа к обьекту
+objectName.propertyName
+OR
+objectName["propertyName"]
+
+
+// Удаление значения обьекта
+
+let person = {
+  firstName: "John",
+  lastName: "Doe",
+};
+delete person.firstName
+console.log(person) 
+// {
+//   lastName: "Doe",
+// };
+
+
+// тест на опредение email почта 
+
+let regex = /^.+@.+\..+$/;
+console.log(regex.test('johndoe@gmail.com')); //returns true
+
+
+/// создать новый отдельный обьект на основе существующео 
+
+ let obj1 = {name: "Bill"}
+    let obj2 = Object.assign({},obj1)
+
+Даты в Javascript являются объектами.
+
+    let today = new Date(); //current date
+    console.log(today)
+
+    let date1 = new Date(2019, 10, 1); // 2019-11-04 
+    console.log(date1) //The month is zero-index. Day and year are not. 
+Вы можете установить новую дату относительно другого объекта даты:
+
+    let date2 = new Date();
+    date2.setDate(date2.getDate() + 5);  //5 days into the future
+Вы можете сравнивать даты if (date1 > date2) {}
+
+Вы можете показать разницу между датами, отображаемыми в миллисекундах. let d3 = date2 - date1.
+Чтобы затем показать, что разница преобразуется в дни, объявив d3 = d3 / (1000 * 60 * 60 *24).
