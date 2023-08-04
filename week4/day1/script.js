@@ -15,6 +15,15 @@ console.log(randomNumber); // Выведет случайное целое чи�
 
 
 
+// Проверка строки пустая или нет 
+
+function isblank(value) {
+return (value.trim().length ===  0) 
+} 
+
+console.log(isblank("   "), isblank("fs d s"), isblank(""), isblank("ff"))
+
+
 
 
 

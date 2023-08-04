@@ -1,52 +1,47 @@
+let chance = 0
 
 
 function playTheGame() {
-
     let askstart = confirm ("would you like to play the game ?");
-
-    if (askstart === false ) {
-        alert("No problem, Goodbye")
-    } else {
-
-       let userNumber = Number(prompt("enter a number between 0 and 10"));
-
-       
-        if ( userNumber =="" || isNaN(userNumber)) {
+    if (askstart ) {
+        let userNum = Number(prompt("enter a number abetween 0 and 10"));
+        if (isNaN(userNum)) { 
             alert("Sorry Not a number, Goodbye");
-        } else if (Number(userNumber) < 0 || Number(userNumber) > 10 ) {
+        } else if  (userNum > 10 || userNum < 0 ) {
             alert(`Sorry it\’s not a good number, Goodbye`);
-        } else { 
-          let  computerNumber = Math.floor(Math.random() * 11)
-            console.log(compareNumbers(userNumber,computerNumber)) 
-        }
+        } else {
+            let  computerNumber = Math.floor(Math.random() * 11)
+            console.log(compareNumbers(userNum,computerNumber)) 
+        }      
+    } else {
+        alert("No problem, Goodbye")
     }
-
 }
 
 
-let chance = 0
+
+
 
 function compareNumbers(userNumber,computerNumber){
-
- 
-
-    if (userNumber === computerNumber) {
-        alert("WINNER");
-        chance = chance + 1
-        console.log(chance)
-    } else if (userNumber > computerNumber) {
-        alert("Your number is bigger then the computer’s")
-         playTheGame()
-    }  else {
-        alert("Your number is smaller then the computer’s, guess again")
-         playTheGame()
-
+    while (true) {
+        if (userNumber == computerNumber) {
+            if (chance === 2) {
+                chance = 0
+                return alert("WINNER, out of chances");
+            }
+            alert("WINNER");
+            chance = chance + 1
+            playTheGame()
+            return
+        } else if (userNumber > computerNumber) {
+            userNumber = prompt("Your number is bigger, enter new");
+            if (!userNumber) return;
+        }  else  {
+            userNumber = prompt("Your number is smaller then the computer’s, guess again");
+            if (!userNumber) return;
+        }
     }
 
-    if (chance > 3) {
-        chance = 0
-        return alert("out of chances");
-    }
-
+   
 }
 
