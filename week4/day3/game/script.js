@@ -1,6 +1,15 @@
 let chance = 0
 
 
+function isnancheck(value) {
+    if (isNaN(value) || value.length === 0) { 
+        alert("Sorry Not a number, Goodbye");
+    } else if  (value > 10 || value < 0 ) {
+        alert(`Sorry it\’s not a good number, Goodbye`);
+    }
+}
+
+
 function playTheGame() {
     let askstart = confirm ("would you like to play the game ?");
     if (askstart ) {
@@ -35,9 +44,11 @@ function compareNumbers(userNumber,computerNumber){
             return
         } else if (userNumber > computerNumber) {
             userNumber = prompt("Your number is bigger, enter new");
+            isnancheck(userNumber)
             if (!userNumber) return;
         }  else  {
             userNumber = prompt("Your number is smaller then the computer’s, guess again");
+            isnancheck(userNumber)
             if (!userNumber) return;
         }
     }
