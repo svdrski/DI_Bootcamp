@@ -1,0 +1,49 @@
+.planet1{
+    background-color: aliceblue;
+}
+
+.planet2{
+    background-color: rgb(69, 112, 150);
+}
+
+.planet3{
+    background-color: rgb(118, 200, 37);
+}
+
+.planet4{
+    background-color: rgb(19, 150, 159);
+}
+
+.planet5{
+    background-color: rgb(24, 143, 78);
+}
+
+.planet6{
+    background-color: rgb(189, 40, 90);
+}
+
+.planet7{
+    background-color: rgb(40, 189, 137);
+}
+
+.planet8{
+    background-color: rgb(57, 40, 189);
+}
+
+
+.planet {
+    height: 100px;
+    width:100px;
+    border-radius: 100px;
+    margin: 20px;
+}
+
+.sattleee{
+    height: 10px;
+    width: 10px;
+    margin-left: 1px;
+    background-color: brown;
+    border: 1px solid;
+    border-radius: 10px;
+    display: inline-block;
+}
