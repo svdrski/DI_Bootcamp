@@ -1,0 +1,133 @@
+<html>
+  <head>
+    <title>JavaScript and the Document Object Model</title>
+  </head>
+  <body>
+
+
+<!-- 
+    <form onsubmit="alert('submit!');">
+      First: Enter in the input field <input type="text" value="text"><br>
+      Second: Click "submit": <input type="submit" value="Submit">
+    </form>
+
+    <form name="my">
+      First: Enter in the input field <input type="text" value="text"><br>
+      Second: Click "submit": <input type="submit" value="Submit">
+    </form>
+    
+        <script>
+                let form = document.forms.my;
+    
+                form.addEventListener("submit", test)
+    
+                function test(){
+                  alert(form[0].value)
+                }
+        </script> -->
+
+
+
+<form name="my">
+  First: Enter in the input field <input type="text" value="text"><br>
+  Second: Click "submit": <input type="submit" value="Submit">
+</form>
+
+    <script>
+            let form = document.forms.my;
+
+            form.addEventListener("submit", test)
+
+            function test(e){
+              alert('submit ! ')
+              e.preventDefault()
+            }
+    </script>
+
+
+
+
+
+
+
+
+
+<!-- 
+    <select id="select1"> 
+      <option value="apple">Middle School</option>
+      <option value="pear">University</option>
+      <option value="banana">College</option>
+  </select>
+
+  <button id="alertt">Show</button>
+
+  <script>
+
+    let sel = document.getElementById("select1")
+
+    console.log(sel[2].value)  
+
+    let newopt = document.createElement("option")
+    newopt.setAttribute("value", "work")
+    newopt.textContent = "Institute"
+    sel.append(newopt)
+
+    let fopt = document.createElement("option")
+    fopt.setAttribute("value",  "Primary School")
+    fopt.textContent = "Primary School"
+    sel.insertBefore(fopt, sel.firstChild)
+
+    sel.selectedIndex = 3
+
+
+    let btn = document.getElementById("alertt")
+
+    btn.addEventListener("click", showresult)
+    
+    function showresult() {
+      let res = sel.options[sel.selectedIndex].textContent
+      alert(res)
+    }
+
+  </script> -->
+  
+
+
+
+
+<!-- 
+
+   <form id="form1" onsubmit="getvalue()"> 
+        <label>First name: </label><input type="text" name="fname" value="David"><br> 
+
+        <label>Last name: </label><input type="text" name="lname" value="BenGurion"><br> 
+
+        <input type="submit" value="Submit"> 
+    </form> 
+
+
+    <select id="A">
+      <option value="apple">Apple</option>
+      <option value="pear">Pear</option>
+      <option value="banana">Banana</option>
+    </select>
+    
+    <script>
+      //get the select form
+      let dropdown = document.getElementById('A')
+    
+      // all three lines do the same thing
+      dropdown.options[2].selected = true; //Banana selected
+      dropdown.value = 'banana'; //Banana selected
+      dropdown.selectedIndex = 2; //Banana selected
+    
+      // To check which option is selected
+        console.log(dropdown.selectedIndex) // "2"
+        console.log(dropdown.value) // "Banana"
+    </script> -->
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>

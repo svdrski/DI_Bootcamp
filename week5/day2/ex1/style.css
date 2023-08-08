@@ -1,0 +1,10 @@
+.fade-out {
+    animation: fadeOut ease 4s;
+
+  }
+  
+  @keyframes fadeOut {
+    0% {opacity:1;}
+    100% {opacity:0;}
+  }
+  

@@ -1,0 +1,131 @@
+<html>
+  <head>
+    <title>JavaScript and the Document Object Model</title>
+  </head>
+  <body>
+
+
+
+
+    <div id="outer">
+      <div id="outera">
+      <button id="inner">Click me</button>
+    </div>
+    </div>
+
+    
+
+
+    <!-- <button id="btn">Click me</button>
+    <button id="btn1">Hey Hey</button>
+
+    <script>
+        let x = document.getElementById("btn")
+        let y = document.getElementById("btn1")
+
+        y.addEventListener("mouseover", RespondMouseOver);
+
+        x.addEventListener("mouseover", RespondMouseOver); 
+
+        function RespondMouseOver(e) { 
+            // console.log("e", e) 
+            // // all the properties of the event object
+            // console.log("My mouse is over the btn named" + e.target.innerHTML)  
+            // console.log("e.type: ", e.type)
+            // // // e.type: mouseover
+            console.log("e.target: ", e.target)
+            // e.target:  <button id=​"btn1">​Hey Hey​</button>​
+        } 
+    </script> -->
+
+
+    <div id="papa" style="width: 200px;">
+      <button id="jsstyle">Style</button>
+  </div>
+  
+
+<script>
+  
+// let stylebtn = document.getElementById("jsstyle")
+
+let pap = document.getElementById("papa")
+function backcolor(e){
+  pap.style.background = "blue"
+  e.target.style.color = "white"
+e.stopPropagation();
+
+
+} 
+pap.addEventListener("click", backcolor)
+
+
+
+
+// красит в красную при наведении
+
+
+// function changecolor(e) {
+// e.target.style.color = "red"
+// }
+
+
+
+// function changecolor2(e) {
+// e.target.style.color = "black"
+// event.stopPropagation
+// }
+
+
+// let pap = document.getElementById("papa")
+
+
+// function changeBack (e) {
+//   e.target.style.background = "blue"
+
+// }
+
+// stylebtn.addEventListener("mouseover", changecolor)
+
+// stylebtn.addEventListener("click", changecolor2)
+
+// pap.addEventListener("click", changeBack)
+
+</script>
+
+
+
+
+    
+    <div id="page">
+      <div id="header">
+        <h1 id="title">Page title</h1>
+      </div>
+      <div id="content">
+        <h2>Content title</h2>
+        <p>Some copy goes here</p>
+        <p>More copy goes here</p>
+      </div>
+      <button id="nono" onclick="inform()">inform</button>
+    </div>
+
+
+    <table id="sampleTable" border="1"> 
+      <tr>
+          <td>Row1 cell1</td> 
+          <td>Row1 cell2</td>
+      </tr> 
+      <tr>
+          <td>Row2 cell1</td> 
+          <td>Row2 cell2</td>
+      </tr> 
+      </table>
+      
+      <input type="button" onclick="insertRow()" value="Insert row">
+
+      <button onclick="alert(this.innerText)">Click me</button>
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
