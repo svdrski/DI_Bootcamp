@@ -16,6 +16,15 @@ button.addEventListener("click", function() {
 });
 
 
+// 
+
+
+
+// setTimeout
+
+setTimeout(function() {
+  alert("hello")
+}, 1000 * 2)
 
 
 
@@ -61,65 +70,89 @@ myLink.addEventListener("click", function(event) {
 
 // Работа с dropdown 
 
-// <select id="A">
-//   <option value="apple">Apple</option>
-//   <option value="pear">Pear</option>
-//   <option value="banana">Banana</option>
-// </select>
 
-// <script>
-//   //get the select form
-//   let dropdown = document.getElementById('A')
+// удалить выбранный элемент 
 
-//   // all three lines do the same thing
-//   dropdown.options[2].selected = true; //Banana selected
-//   dropdown.value = 'banana'; //Banana selected
-//   dropdown.selectedIndex = 2; //Banana selected
+let form = document.getElementById("colorSelect")
+let btn = document.querySelector("input")
 
-//   // To check which option is selected
-//     console.log(dropdown.selectedIndex) // "2"
-//     console.log(dropdown.value) // "Banana"
-// </script>
+btn.addEventListener("click", removecolor )
 
-// input.checked	Check if the input is checked : return a boolean
-
-// <select id="select1"> 
-// <option value="apple">Middle School</option>
-// <option value="pear">University</option>
-// <option value="banana">College</option>
-// </select>
-
-// <button id="alertt">Show</button>
-
-// <script>
-
-// let sel = document.getElementById("select1")
-
-// console.log(sel[2].value)  
-
-// let newopt = document.createElement("option")
-// newopt.setAttribute("value", "work")
-// newopt.textContent = "Institute"
-// sel.append(newopt)
-
-// let fopt = document.createElement("option")
-// fopt.setAttribute("value",  "Primary School")
-// fopt.textContent = "Primary School"
-// sel.insertBefore(fopt, sel.firstChild)
-
-// sel.selectedIndex = 3
+function removecolor() {
+form.remove(form.selectedIndex)
+}
 
 
-// let btn = document.getElementById("alertt")
+/// изменить элемент по умолчанию 
 
-// btn.addEventListener("click", showresult)
+const sele = document.getElementById("sele")
 
-// function showresult() {
-// let res = sel.options[sel.selectedIndex].textContent
-// alert(res)
-// }
+sele.options[2].selected = true
+sele.value = "2"
+sele.selectedIndex = 0
 
-// </script>
+
+
+
+<select id="A">
+  <option value="apple">Apple</option>
+  <option value="pear">Pear</option>
+  <option value="banana">Banana</option>
+</select>
+
+<script>
+  //get the select form
+  let dropdown = document.getElementById('A')
+
+  // all three lines do the same thing
+  dropdown.options[2].selected = true; //Banana selected
+  dropdown.value = 'banana'; //Banana selected
+  dropdown.selectedIndex = 2; //Banana selected
+
+  // To check which option is selected
+    console.log(dropdown.selectedIndex) // "2"
+    console.log(dropdown.value) // "Banana"
+</script>
+
+input.checked	Check if the input is checked : return a boolean
+
+<select id="select1"> 
+<option value="apple">Middle School</option>
+<option value="pear">University</option>
+<option value="banana">College</option>
+</select>
+
+<button id="alertt">Show</button>
+
+<script>
+
+let sel = document.getElementById("select1")
+
+console.log(sel[2].value)  
+
+let newopt = document.createElement("option")
+newopt.setAttribute("value", "work")
+newopt.textContent = "Institute"
+sel.append(newopt)
+
+let fopt = document.createElement("option")
+fopt.setAttribute("value",  "Primary School")
+fopt.textContent = "Primary School"
+sel.insertBefore(fopt, sel.firstChild)
+
+sel.selectedIndex = 3
+
+
+let btn = document.getElementById("alertt")
+
+btn.addEventListener("click", showresult)
+
+function showresult() {
+let res = sel.options[sel.selectedIndex].textContent
+alert(res)
+}
+
+</script>
 
 
 

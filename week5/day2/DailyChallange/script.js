@@ -62,14 +62,29 @@ let storycount = 0;
 //shuffle
 let shuffle = document.getElementById("shuffle")
 shuffle.addEventListener("click", change)
+let lastValue = 0;
+
+function getRandomNumber(val) {
+  let randomNumber;
+  do {
+    randomNumber = Math.floor(Math.random() * 3) ;
+  } while (randomNumber === val);
+  console.log(randomNumber)
+  return randomNumber; 
+}
+
 
 function change () {
   let newp = document.createElement("p")
-  document.body.lastChild.remove()
-  newp.textContent = story[storycount]
-  document.body.append(newp)
-  storycount === 2 ? storycount = 0 : storycount++
 
+  let rand = getRandomNumber(lastValue);
+
+  lastValue = rand;
+
+  document.body.lastChild.remove();
+  newp.textContent = story[rand];
+  document.body.append(newp);
+  
 }
 
 //print story

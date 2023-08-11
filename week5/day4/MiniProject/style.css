@@ -1,0 +1,34 @@
+#sidebar{
+    width: 20%;
+    display: grid;
+    height: 100vh;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+
+}
+
+#sidebar > * {
+border: 1px solid;
+}
+
+button {
+    grid-column: 1/4;
+}
+
+#main {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-gap: 3px;
+    grid-template-columns: repeat(60, 1fr);
+    padding: 5px;
+}
+
+#main > * {
+    border: 1px solid;
+}
+
+body{
+    display: flex;
+}

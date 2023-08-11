@@ -1,0 +1,31 @@
+<!doctype html> 
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8" />
+        <title>Challenge: Mad Libs</title>
+       </head>
+       <body>
+
+        <select onchange="handleSubmit(event)"  id="sele">
+            <option value="1">Value1</option>
+            <option value="2">Value2</option>
+            <option value="3">Value3</option>
+        </select>
+
+        <form id="form1" onsubmit="handleSubmit(event)" name="form1"> 
+            <label>First name: </label><input type="text" name="fname" value="David"><br> 
+            <label>Last name: </label><input type="text" name="lname" value="BenGurion"><br> 
+            <input type="submit" value="Submit"> 
+            <input type="checkbox" value="davaa"
+        </form> 
+
+        <form onsubmit="handleSubmit(event)"  method="post">
+            Email: <input type="Email" name="Email">
+            Name: <input type="text" name="Name">
+            <input type="submit" value="submit">
+        </form>
+        
+    <script src="script.js"></script>
+    </body> 
+</html> 
+

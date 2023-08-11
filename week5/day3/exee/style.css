@@ -1,0 +1,30 @@
+/* .outer {
+    height: 400px;
+    width: 400px;
+    background-color: aqua;
+}
+
+.inner {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+} */
+
+
+
+
+.outer {
+    height: 400px;
+    width: 400px;
+    background-color: aqua;
+    position: absolute;
+}
+
+.inner {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    top: 0;
+    left: 0;
+}
