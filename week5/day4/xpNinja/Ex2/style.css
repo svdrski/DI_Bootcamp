@@ -1,0 +1,82 @@
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+  .blockk {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: blck 3s linear infinite;
+  }
+
+  .blockk2 {
+    animation: blck2 3s linear infinite;
+  }
+
+  @keyframes blck {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+  }
+
+  @keyframes blck2 {
+    0% {transform: rotate(20deg);}
+    100% {transform: rotate(380deg);}
+  }
+
+  
+  .load {
+    font-size: 44px;
+  }
+
+
+.l {animation: l 4s infinite;}
+.o {animation: o 4s infinite;}
+.a {animation: a 4s infinite;}
+.d {animation: d 4s infinite;}
+.i {animation: i 4s infinite;}
+.n {animation: n 4s infinite;}
+.g {animation: g 4s infinite;}
+
+@keyframes l {
+  0%              {opacity: 1;}
+  14.2857142856%  {opacity: 1;}
+  14.2857142857%  {opacity: 0;}
+  100%            {opacity: 0;}
+}
+
+
+@keyframes o {
+    0%              {opacity: 1;}
+    22.2857142856%  {opacity: 1;}
+    33.2857142857%  {opacity: 0;}
+    100%            {opacity: 0;}
+  }
+
+  
+  @keyframes d {
+    0%              {opacity: 1;}
+    44.2857142856%  {opacity: 1;}
+    88.2857142857%  {opacity: 0;}
+    100%            {opacity: 0;}
+  }
+
+  
+  @keyframes i {
+    0%              {opacity: 1;}
+    4.2857142856%  {opacity: 1;}
+    55.2857142857%  {opacity: 0;}
+    100%            {opacity: 0;}
+  }
+  
