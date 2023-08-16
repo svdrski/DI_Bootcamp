@@ -11,7 +11,7 @@ let p2chance = document.getElementById("p2chance")
 let snakesound = document.getElementById("snakesound")
 let laddersound = document.getElementById("ladder")
 let backgroundsound = document.getElementById("backgroundsound")
-let nechetnie = [11,12,13,14,15,16,17,18,19,31,32,33,34,35,36,37,38,39,51,52,53,54,55,56,57,58,59,71,72,73,74,75,76,77,78,79,91,92,93,94,95,96,97,98,99]
+let nechetnie = [11,12,13,14,15,16,17,18,19,20,31,32,33,34,35,36,37,38,39,51,52,53,54,55,56,57,58,59,71,72,73,74,75,76,77,78,79,91,92,93,94,95,96,97,98,99]
 let nechetnie2 = [20,40,60,80,11,12,13,14,15,16,17,18,19,31,32,33,34,35,36,37,38,39,51,52,53,54,55,56,57,58,59,71,72,73,74,75,76,77,78,79,91,92,93,94,95,96,97,98,99]
 
 let ltrNum = 81
@@ -120,14 +120,25 @@ let checker = 1
 
 
 function moover (currentplayer, rannum) {
-    if ([10,20,30,40,50,60,70,80,90].includes(currentplayer.currentposition) && ([10,20,30,40,50,60,70,80,90] !==  rannum + currentplayer.bufferposition)) {
+    // if ([10,20,30,40,50,60,70,80,90].includes(currentplayer.currentposition) && (currentplayer.currentposition !==  rannum + currentplayer.bufferposition)) {
+        
+    //     currentplayer.fishka.style.marginBottom = currentplayer.marginbottom+"px"
+    //     currentplayer.marginbottom += 71.8
+
+     if (currentplayer.currentposition ===  (rannum + currentplayer.bufferposition)){
+        return
+     }else if (currentplayer.margleft === 660) {
         currentplayer.fishka.style.marginBottom = currentplayer.marginbottom+"px"
         currentplayer.marginbottom += 71.8
-
-    } else if (nechetnie.includes(currentplayer.currentposition) && ![11,31,51,71,91].includes(rannum + currentplayer.bufferposition)) {
+        currentplayer.margleft--
+    } else if (currentplayer.margleft === 15 && (currentplayer.currentposition !==  rannum + currentplayer.bufferposition)) {
+        currentplayer.fishka.style.marginBottom = currentplayer.marginbottom+"px"
+        currentplayer.marginbottom += 71.8
+        currentplayer.margleft++
+    } else if (nechetnie2.includes(currentplayer.currentposition) && (currentplayer.margleft !== 660) ) {
         currentplayer.fishka.style.marginLeft = currentplayer.margleft +"px"
         currentplayer.margleft--
-    } else {
+    } else if (!(nechetnie2.includes(currentplayer.currentposition)) && (currentplayer.margleft !== 15 ) ) {
         currentplayer.fishka.style.marginLeft = currentplayer.margleft +"px"
         currentplayer.margleft++
     }
@@ -176,15 +187,14 @@ function positionChecker (checkpos) {
 
 function stopper (currentplayer, randnumber, intervalname) {
     
-    if ( currentplayer.currentposition ===  randnumber + currentplayer.bufferposition ||  currentplayer.currentposition === 100 ) {
+    if ( currentplayer.currentposition ===  randnumber + currentplayer.bufferposition || 
+        currentplayer.currentposition === 100 ) {
         currentplayer.bufferposition += randnumber
-        
-        if ([11,21,31,41,51,61,71,81,91].includes(currentplayer.currentposition)) {
+      
+        if([11,21,31,41,51,61,71,81,91].includes(currentplayer.currentposition)) {
             clearInterval(intervalname)
-            console.log("stopenew")
         } else {
             setTimeout(function() {clearInterval(intervalname)} , 135)
-            
         }
         
         
@@ -242,20 +252,22 @@ function sneak (currentplayer, stop) {
     moover (currentplayer, stop);
 
     if ( currentplayer.currentposition ===  stop ) {
+
+
         currentplayer.bufferposition += (stop - currentplayer.bufferposition)
         currentplayer.fishka.style.marginLeft = currentplayer.margleft + "px"
 
-        if ([11,21,31,41,51,61,71,81,91].includes(currentplayer.currentposition)) {
-            clearInterval(intervalname)
-            console.log("stopenew")
+        if([11,21,31,41,51,61,71,81,91].includes(currentplayer.currentposition)) {
+            clearInterval(snkk)
         } else {
             setTimeout(function() {clearInterval(snkk)} , 135)
-            
         }
 
-
         // setTimeout(function() {clearInterval(snkk)} , 135)
+
+
         currentplayer.lastpoint = currentplayer.currentposition   
+        
 } 
 },1)
 } ,1000)
@@ -273,7 +285,17 @@ function ladder (currentplayer, stop) {
     if ( currentplayer.currentposition ===  stop ) {
         currentplayer.bufferposition -= (currentplayer.bufferposition - stop)
         currentplayer.fishka.style.marginLeft = currentplayer.margleft + "px"
-        setTimeout(function() {clearInterval(snkk)} , 135)
+
+        if([11,21,31,41,51,61,71,81,91].includes(currentplayer.currentposition)) {
+            clearInterval(snkk)
+        } else {
+            setTimeout(function() {clearInterval(snkk)} , 135)
+        }
+        
+
+        // setTimeout(function() {clearInterval(snkk)} , 135)
+
+
         console.log(currentplayer.bufferposition, currentplayer.currentposition)     
 } 
 },1)
