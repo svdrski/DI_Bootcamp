@@ -1,23 +1,22 @@
 
-
+let box = document.getElementById("main")
 let color = "none";
 let click = false;
-
 let colorsarr = document.querySelectorAll("#sidebar > *")
-
-
 let bod = document.body
-
-
-let blocks = document.querySelectorAll("#main > *")
 let main = document.getElementById("main")
 
 
-let btn = document.querySelector("button")
- btn.addEventListener("click", function(){
-  for (a of blocks) {
-    a.style.backgroundColor = "white"
-  }} )
+function createGrid() {
+  for (let i = 0; i < 1620; i++) {
+      let div = document.createElement("div");
+      div.style.backgroundColor = "white";
+      main.appendChild(div);
+  }
+}   
+createGrid() 
+let blocks = document.querySelectorAll("#main > *")
+
 
 for ( x of colorsarr) {
   x.addEventListener("click", function(event) {
@@ -26,22 +25,30 @@ for ( x of colorsarr) {
   })}
 
 
-for (a of blocks) {
-  a.addEventListener("mousedown", function(event){
-   if (click) event.target.style.background = color
-  })
-  a.addEventListener("mouseover", function(event){
-    if (click)  event.target.style.background = color
-  })
+function addEventListenersToCells() {
+  for (let cell of blocks) {
+      cell.addEventListener("mousedown", setColor);
+      cell.addEventListener("mouseover", setColorOver);
+      cell.addEventListener("mouseup", stopColor)
+  }
+}
+addEventListenersToCells()
+
+
+function setColor() {
+click = true
 }
 
-bod.addEventListener("mousedown",function(){
-click = true
-})
+function setColorOver(event) {
+  if (click === true) {
+    event.target.style.background = color
+  }}
 
-bod.addEventListener("mouseup", function() {
-  click = false
-})
+function stopColor(event) {
+click = false
+}
+
+
 
 
 
