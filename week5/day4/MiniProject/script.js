@@ -44,7 +44,7 @@ function setColorOver(event) {
     event.target.style.background = color
   }}
 
-function stopColor(event) {
+function stopColor() {
 click = false
 }
 
