@@ -56,6 +56,7 @@ title varchar(50) NOT NULL,
 author varchar(50) NOT NULL
 )
 
+
 insert into Book (title, author )
 values ('Alice In Wonderland', 'Lewis Carroll'),
 ('Harry Potter', 'J.K Rowling'),
@@ -67,6 +68,8 @@ name varchar(50) NOT NULL UNIQUE,
 age SMALLINT CHECK (age <= 15)
 )
 ---4
+select * from Student
+
 insert into Student (name, age )
 values ('John', 12),
 ('Lera', 11),
@@ -85,32 +88,14 @@ FOREIGN KEY (student_fk_id) REFERENCES Student(student_id) ON DELETE CASCADE ON 
 ---6
 INSERT INTO Library (book_fk_id, student_fk_id, borrowed_date)
 VALUES 
-(
-    (SELECT book_id FROM Book WHERE title = 'Alice In Wonderland'),
-    (SELECT student_id FROM Student WHERE name = 'John'),
-    '2022-02-15'
-),
-(
-    (SELECT book_id FROM Book WHERE title = 'To kill a mockingbird'),
-    (SELECT student_id FROM Student WHERE name = 'Bob'),
-    '2021-03-03'
-),
+(1, 1,'2022-02-15'),
+(3, 4, '2021-03-03'),
+(2,2,'2021-05-23'),
+(2,4,'2021-08-12')
 
- (
-    (SELECT book_id FROM Book WHERE title = 'Alice In Wonderland'),
-    (SELECT student_id FROM Student WHERE name = 'Lera'),
-    '2021-05-23'
-),
 
- (
-    (SELECT book_id FROM Book WHERE title = 'Harry Potter'),
-    (SELECT student_id FROM Student WHERE name = 'Bob'),
-    '2021-08-12'
-)
 
-7
-select * from Library
-----
+----7
 select Student.name, Book.title
 from Student
 inner join Library
