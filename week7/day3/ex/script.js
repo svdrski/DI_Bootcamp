@@ -39,14 +39,47 @@
 // })(10)
 
 
-function add() {
-  let counter = 0;  // create counter as number
-  /////----------------------
-  function plus() {   // create new function
-      counter += 1;    //  add 1 to counter
-      console.log(counter) ; //console log counter
-  }
-  plus();  // start function plus - (counter + 1)
-}
+// function add() {
+//   let counter = 0;  // create counter as number
+//   /////----------------------
+//   function plus() {   // create new function
+//       counter += 1;    //  add 1 to counter
+//       console.log(counter) ; //console log counter
+//   }
+//   plus();  // start function plus - (counter + 1)
+// }
 
-add() // start function - result - console log 1
+// add() // start function - result - console log 1
+
+
+/// замыкания
+
+// function outside(x) {
+//   function inside(y) {
+//     return x + y;
+//   }
+//   return inside;
+// }
+
+// let fnInside = outside(3);
+
+
+// let result = fnInside(5); // The same as calling outside(3)(5)
+// console.log(result) // returns 8
+
+
+
+let add = (function () {
+  let counter = 0;
+  function calculus() {
+      counter += 1; 
+      return counter
+  }
+  console.log(counter)
+  return calculus
+  
+})();
+
+add();
+add();
+add();
