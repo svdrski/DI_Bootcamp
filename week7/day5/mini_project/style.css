@@ -1,0 +1,108 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+h1{
+    color: #fff;
+}
+.colomn {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    justify-content: space-evenly;
+}
+
+#searchbox{
+    background: #404040;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.searchresult{
+    height: 100px;
+}
+
+#search{
+    width: 200px;
+    height: 40px;
+    padding-left: 14px;
+    border-radius: 5px;
+    border: none;
+}
+
+
+#bsearch{
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(0, 143, 17);
+    color: #fff;
+    margin-left: 10px;
+}
+
+#searchresult{
+    color: #Fff;
+    width: 400px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.navigate{
+    color: #fff;
+    width: 100px;
+    display: flex;
+    text-decoration: underline;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#section{
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px
+}
+
+#p{
+    font-size: 30px;
+    min-height: 100px;
+    text-align: center;
+}
+
+.colomn > p {
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
+    height: 20px;
+}
+
+.colomn > button {
+border: none;
+font-size: 12px;
+padding: 5px 15px;
+background-color: rgb(232, 197, 101);
+border-radius: 5px;
+}
+
+#Generate_Quote{
+    height: 50px;
+    width: 190px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(0, 155, 64);
+    color: #fff;
+}
+
+
+#form {
+    height: 30px;
+    margin-top: 60px;
+}

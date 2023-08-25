@@ -75,8 +75,7 @@ let add = (function () {
       counter += 1; 
       return counter
   }
-  console.log(counter)
-  return calculus
+    return calculus
   
 })();
 

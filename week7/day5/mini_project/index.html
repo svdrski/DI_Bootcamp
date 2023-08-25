@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+  <section id="section" >
+    <p id="p"> Let's Start</p>
+    <button id="Generate_Quote"> Generate Quote </button>
+    <form id="form">
+      <input id="Quoteinput" type="text" placeholder="Quote">
+      <input id="Authorinput" type="text" placeholder="Author">
+      <input id="sendform" type="submit" value="add a new quote">
+    </form>
+
+
+    <div class="colomn">
+    
+      <p id="pcharwithspace"></p>
+      <button id="charwithspace"> number of character inside each quote (space included)  </button>
+      <p id="pcharwithoutspace"></p>
+      <button id="charwithoutspace"> number of character inside each quote (space NOT included)  </button>
+      <p id="pnum_words"></p>
+      <button id="num_words"> number of words </button>
+      <p id="plike"></p>
+      <button id="Like"> Like- </button>
+    </div>
+    
+  </section>
+
+  <div id="searchbox">
+    <h1>My Quotes</h1>
+    <p id="searchresult"></p>
+    <form>
+    <input type="search" id="search" placeholder="Enter name">
+    <input type="submit" id="bsearch" value="search">
+  </form>
+  <div class="navigate">
+    <span id="Previous">Previous</span>
+    <span id="Next">Next</span>
+  </div>
+
+  </div>
+
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
