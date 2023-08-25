@@ -93,7 +93,7 @@ function func4 () {
 
 
 
-///////////////3.1
+///////////////3
 
 const searchbox = document.getElementById('search');
 const bsearch = document.getElementById('bsearch');
@@ -133,8 +133,7 @@ function funcPrevious () {
 
 //add to the page
 function print () {
-  let output = '';
-  output = ` ${array[result[currentindex]].quote} <br> <span style="color: aquamarine;"> ${array[result[currentindex]].author} </span><br> <br>`
+  let output = ` ${array[result[currentindex]].quote} <br> <span style="color: aquamarine;"> ${array[result[currentindex]].author} </span><br> <br>`
   searchresult.innerHTML = output
 }
 
