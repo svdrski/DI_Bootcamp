@@ -1,45 +1,27 @@
-const gameInfo = [
-    {
-      username: "john",
-      team: "red",
-      score: 5,
-      items: ["ball", "book", "pen"]
-    },
-    {
-      username: "becky",
-      team: "blue",
-      score: 10,
-      items: ["tape", "backpack", "pen"]
-    },
-    {
-      username: "susy",
-      team: "red",
-      score: 55,
-      items: ["ball", "eraser", "pen"]
-    },
-    {
-      username: "tyson",
-      team: "green",
-      score: 1,
-      items: ["book", "pen"]
-    },
-   ];
-   
-   const usernames =[]
-   const winners = []
+const inventory = [
+  { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
+  { id: 2, car_make: "Mazda", car_model: "Miata MX-5", car_year: 2001 },
+  { id: 3, car_make: "Honda", car_model: "Accord", car_year: 1983 },
+  { id: 4, car_make: "Land Rover", car_model: "Defender Ice Edition", car_year: 2010 },
+  { id: 5, car_make: "Honda", car_model: "Accord", car_year: 1995 },
+];
 
 
-   /// 1
-   gameInfo.forEach((value) =>  usernames.push(value.username + "!"))
-   console.log(usernames)
+function getCarHonda(carInventory) {
+//2.1
+let result = carInventory.find(v => v.car_make === 'Honda')
+//2.2
+result = `This is a ${result.car_make} ${result.car_model} from ${result.car_year}`
+return result 
+}
+console.log(getCarHonda(inventory))
 
-   
-   ///2
-   gameInfo.forEach((value)=> value.score > 5 && winners.push(value.username) )
-   console.log(winners)
 
-   ///3
-   let total = 0;
-   gameInfo.forEach((value)=> total += value.score)
-   console.log(total)
+/// Part 2
 
+function sortCarInventoryByYear(carInventory) {
+ let result =  carInventory.sort((a, b) => a.car_year - b.car_year)
+ return result
+}
+
+console.log(sortCarInventoryByYear(inventory))
