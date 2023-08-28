@@ -1,55 +1,48 @@
-let arr = [1,2,3,4,5,6,7,2,3,4,4,4,4]
+// Exercise 1
+[1, 2, 3].map(num => {
+  if (typeof num === 'number') return num * 2;
+  return ;
+});
 
-//1 SUM
-function summer (array) {
-  let sum =0;
-  array.forEach((value) => sum += value) 
-  console.log(sum) 
-}
-summer(arr)
+// if current value is number = current value * 2 and add to array 
 
-//2 Remove Duplicates
-console.log(arr)
-function Duplicates (array) {
-  let copies = []
-  array.forEach( (eachvalue, index)=> copies.includes(eachvalue) ? arr.splice(index) : copies.push(eachvalue)
-  )
-  console.log(array)
-}
 
-Duplicates(arr) 
+//Exercise 2 
+ [[0, 1], [2, 3]].reduce(
+  (acc, cur) => {
+    return acc.concat(cur);
+  },
+  [1, 2],
+);
+
+ // return [1,2,0,1,2,3]  contcat two arrays to one and start from 1,2
+
+
+ // Exercise 3
+
+// const arrayNum = [1, 2, 4, 5, 8, 9];
+// const newArray = arrayNum.map((num, i) => {
+//     console.log(num, i);
+//     alert(num);
+//     return num * 2;
+// })
+
+
+// i - index of array -  starts from 0 to 5
+
+
+/// Exercise 4
+
+//1
+const array = [[1],[2],[3],[[[4]]],[[[5]]]]
+let result = console.log(array.flat(2))
+
+//2
+const greeting = [["Hello", "young", "grasshopper!"], ["you", "are"], ["learning", "fast!"]];
+let result2 = (greeting.map(v => v.join(' ')))
+
+let result3 = console.log(result2.join(' '))
 
 //3 
-
-let sample = [NaN, 0, 15, false, -22, '',undefined, 47, null]
-console.log(sample)
-
-function Remove_Certain (array) {
-  return array.filter( (value) => value !== null && value !== "" && value !== 0 && value !== false && value !== undefined &&  !isNaN(value))
-}
-
-let neww = Remove_Certain(sample)
-console.log(neww)
-
-
-//4
-let repeat = (value, quant = 1) => value.repeat(quant)
-
-console.log(repeat('Ha!'));
-console.log(repeat('Ha!',3));
-
-
-//5
-const startLine = '     ||<- Start line';
-let turtle = '🐢';
-let rabbit = '🐇';
-
-console.log(startLine);
-console.log(turtle);
-console.log(rabbit);
-
-turtle = turtle.trim().padEnd(9, '=');
-
-console.log(startLine);
-console.log(turtle.padStart(7));
-console.log(rabbit.padStart(7));
+const trapped = [[[[[[[[[[[[[[[[[[[[[[[[[[3]]]]]]]]]]]]]]]]]]]]]]]]]]
+let finish =  console.log(trapped.flat(99999999999999999))
