@@ -1,88 +1,99 @@
-const menu = [
+const data = [
   {
-    type : "starter",
-    name : "Houmous with Pita"
+    name: 'Butters',
+    age: 3,
+    type: 'dog'
+  },
+   {
+    name: 'Cuty',
+    age: 5,
+    type: 'rabbit'
   },
   {
-    type : "starter",
-    name : "Vegetable Soup with Houmous peas"
+    name: 'Lizzy',
+    age: 6,
+    type: 'dog'
   },
   {
-    type : "dessert",
-    name : "Chocolate Cake"
+    name: 'Red',
+    age: 1,
+    type: 'cat'
+  },
+  {
+    name: 'Joey',
+    age: 3,
+    type: 'dog'
+  },
+  {
+    name: 'Rex',
+    age: 10,
+    type: 'dog'
+  },
+];
+
+
+let sum1 = function (array) {
+  let acc = 0;
+  for (a of array) {
+   acc +=  (a.age * 7)
   }
-]
-
-////// 1
-let check =  menu.some(item =>  item.type === 'dessert')
-console.log(check)
-
-///////2
-let allstarters = menu.every(item => item.type ==='starter')
-console.log(allstarters)
-
-////////3
-let maincheck = menu.some( (item) => item.type === 'main course' )
-
-maincheck ? console.log('main course') : menu.push({
-  type : "main course",
-  name : "Pizza"
-})
-
-
-
-//////////////////////
-
-const vegetarian = ["vegetable", "houmous", "eggs", "vanilla", "potatoes" ]
-
-for (const bludo of menu) {
-  bludo.vegetarian = false
-  vegetarian.forEach( (value) =>  {if (bludo.name.toLocaleLowerCase().includes(value)) {bludo.vegetarian = true}}  )
-  }
-
-  console.log(menu)
-
-
-
-
-
-//////////// Exercise 2
-
-function string_chop (string, number) {
-  let result = []
-  let newstring = string;
-  for(i=0; i< string.length; i+=number) {
-    result.push(newstring.slice(0, number))
-    newstring = newstring.substring(number)
-     console.log(newstring)
-  }
-  console.log(result)
+  console.log(acc) 
 }
+sum1(data)
 
-string_chop ('developers',2)
-
-
-
-
-////////// Exercise 3
-
-function search_word (string, word) {
-  let arr = string.split(' ')
-  let quant = 0;
-  arr.forEach((value)=> value === word && quant++ ) 
-  console.log(`${word} was found ${quant} times`)
-}
-
-search_word('The quick fox brown fox', 'fox')
+let yearssum = data.reduce((acc, value) => {
+  return acc + value.age * 7 }, 0)
+console.log(yearssum)
 
 
+//// Exercie 2
 
-////////// Exercise 4
+const userEmail3 = ' cannotfillemailformcorrectly@gmail.com '
+let result1 = userEmail3.replace(' ', '')
+console.log(result1)
 
-function reverseArray(array) {
-  let obj = array.reverse()
-  console.log(obj)
-}
-reverseArray([1,2,3,4,5])
-reverseArray([1,2])
-reverseArray([1,2,3,4,5,6,7,8,9,10])
+
+///Exercise 3
+
+const users = [{ firstName: 'Bradley', lastName: 'Bouley', role: 'Full Stack Resident' },
+             { firstName: 'Chloe', lastName: 'Alnaji', role: 'Full Stack Resident' },
+             { firstName: 'Jonathan', lastName: 'Baughn', role: 'Enterprise Instructor' },
+             { firstName: 'Michael', lastName: 'Herman', role: 'Lead Instructor' },
+             { firstName: 'Robert', lastName: 'Hajek', role: 'Full Stack Resident' },
+             { firstName: 'Wes', lastName: 'Reid', role: 'Instructor'},
+             { firstName: 'Zach', lastName: 'Klabunde', role: 'Instructor'}];
+
+
+let result2 = users.map(value => ({
+[`${value.firstName} ${value.lastName}`]: value.role
+}))
+console.log(result2)
+
+// => ({ code}) используется для возврата в виде обекта
+
+
+//Exercsie 4
+
+const letters = ['x', 'y', 'z', 'z']
+
+let result  = {}
+
+for (i=0;i<letters.length;i++) {
+  let letter = letters[i]
+  if (result[letter]){
+    result[letter]++
+  } else {result[letter] = 1
+}}
+
+console.log(result)
+
+////
+
+let reducce = letters.reduce ((acc, value) => {
+if(acc[value]){
+  acc[value]++
+} else {acc[value] = 1}
+return acc
+}, {})
+
+console.log(reducce)
