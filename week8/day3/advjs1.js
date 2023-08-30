@@ -1,29 +1,29 @@
-let newwww = {...'hleb'}
-console.log(newwww)
+// let newwww = {...'hleb'}
+// console.log(newwww)
 
 
-let newwwww2 = {...['a', 'b']}
-console.log(newwwww2)
+// let newwwww2 = {...['a', 'b']}
+// console.log(newwwww2)
 
 
-const user = { name: 'Lydia', age: 21 };
-const admin = { admin: true, ...user };
-console.log(admin);
+// const user = { name: 'Lydia', age: 21 };
+// const admin = { admin: true, ...user };
+// console.log(admin);
 
-let дверь = {имя: 'Вася', Фамилия: 'лох'}
-let жопа = {ширина: 24, длина: 25}
+// let дверь = {имя: 'Вася', Фамилия: 'лох'}
+// let жопа = {ширина: 24, длина: 25}
 
-let новый = Object.assign({}, дверь, жопа)
+// let новый = Object.assign({}, дверь, жопа)
 
-console.log(новый)
+// console.log(новый)
 
-let myCar = {
-  color : 'blue',
-  details : {
-    plateNumber: 123,
-    name : "Ford"
-  }
-}
+// let myCar = {
+//   color : 'blue',
+//   details : {
+//     plateNumber: 123,
+//     name : "Ford"
+//   }
+// }
 
 
 
