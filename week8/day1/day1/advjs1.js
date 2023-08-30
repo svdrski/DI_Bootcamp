@@ -1,84 +1,98 @@
-
-let [c, d, ...rest] = [10, 20, 30, 40, 50];
-
-console.log(c,d,rest)
-
-
-let prices = [12, 20, 18];
-let newPriceArray = [...prices];
-console.log(newPriceArray);
-
-
-
-let alphabets = ["A", ..."BCD", "E"];
-console.log(alphabets);
-
-
-let array = [...'fsakfnfewonfnewfwe']
-console.log(array)
+let newwww = {...'hleb'}
+console.log(newwww)
 
 
 
 
 
-let party = [
 
-    {
-      desert: 'Chocolate Mousse',
-      calories: 30,
-    },
+
+
+
+
+
+
+
+// let [c, d, ...rest] = [10, 20, 30, 40, 50];
+
+// console.log(c,d,rest)
+
+
+// let prices = [12, 20, 18];
+// let newPriceArray = [...prices];
+// console.log(newPriceArray);
+
+
+
+// let alphabets = ["A", ..."BCD", "E"];
+// console.log(alphabets);
+
+
+// let array = [...'fsakfnfewonfnewfwe']
+// console.log(array)
+
+
+
+
+
+// let party = [
+
+//     {
+//       desert: 'Chocolate Mousse',
+//       calories: 30,
+//     },
     
-    {
-      desert: 'Apple Pie',
-      calories: 15,
-    },
-    {
-      desert: 'Croissant',
-      calories: 50,
-    },
-    {
-      desert: 'Strawberry Icecream',
-      calories: 5,
-    },
+//     {
+//       desert: 'Apple Pie',
+//       calories: 15,
+//     },
+//     {
+//       desert: 'Croissant',
+//       calories: 50,
+//     },
+//     {
+//       desert: 'Strawberry Icecream',
+//       calories: 5,
+//     },
     
-  ]
+//   ]
 
   
-let result = party.reduce((start, value) => {
-    if (value.desert !== 'Apple Pie') {
-        return start + value.calories
-    } return start
-    }, 0)
+// let result = party.reduce((start, value) => {
+//     if (value.desert !== 'Apple Pie') {
+//         return start + value.calories
+//     } return start
+//     }, 0)
 
-console.log(result)
-
-
-
-var my_array = [1,3,5,2,4];
-
-let copy = [...my_array]
-
-my_array.push(3)
-console.log(my_array, copy)
-
-my_array.map(function(item,index,arr) {
-  console.log("item: " + item + " at index: " + index + " in the array: " + arr);
-});
+// console.log(result)
 
 
 
-// перевод массива в массив из обьектов
+// var my_array = [1,3,5,2,4];
 
-myArr = [10,20,30,40];
+// let copy = [...my_array]
 
-let newArr = myArr.map((val, i, arr) => {
-  return {
-    value: val,
-    index: i
-  };
-});
+// my_array.push(3)
+// console.log(my_array, copy)
 
-console.log(newArr)
+// my_array.map(function(item,index,arr) {
+//   console.log("item: " + item + " at index: " + index + " in the array: " + arr);
+// });
+
+
+
+// // перевод массива в массив из обьектов
+
+// myArr = [10,20,30,40];
+
+// let newArr = myArr.map((val, i, arr) => {
+//   return {
+//     value: val,
+//     index: i
+//   };
+// });
+
+// console.log(newArr)
 
 
 
