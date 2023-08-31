@@ -84,16 +84,20 @@ function output (e) {
   container.innerHTML = ''
   let searchvalue = this.value
   let array = []
-  robots.forEach(value => {
-    if (value.name.toLowerCase().includes(searchvalue.toLowerCase())){
-      array.push(value)
-    }
+
+  let filtered = robots.filter(value => {
+    return value.name.toLowerCase().includes(searchvalue.toLowerCase())
   })
-   print(array)
+  array.push(filtered)
+  print(filtered)
 }
 
 
-
+  // robots.forEach(value => {
+  //   if (value.name.toLowerCase().includes(searchvalue.toLowerCase())){
+  //     array.push(value)
+  //   }
+  // })
 
 
 function print (value) {
