@@ -1,0 +1,63 @@
+@import url('https://fonts.cdnfonts.com/css/sega-logo-font');
+@import url('https://fonts.cdnfonts.com/css/nrt-reg');
+
+                
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'NRT Reg', sans-serif;
+
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+td {
+    width: 100px;
+    height: 100px;
+    border: 10px solid;
+}
+
+table tr:first-child td {
+    border-top: none;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table tr td:first-child {
+    border-left: 0px;
+}
+
+table tr td:last-child {
+    border-right: 0px;
+}
+
+table {
+    border-collapse: collapse;
+    display: none;
+}
+
+
+#restartblock{
+    display: none;
+}
+
+td{
+font-size: 60px;
+text-align: center;
+}
+
+#playerselector > button {
+    width: 80px;
+    height: 30px;
+}
+
+#playerselector > p {
+    text-align: center;
+
+}
