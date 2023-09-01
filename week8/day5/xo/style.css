@@ -1,0 +1,73 @@
+@import url('https://fonts.cdnfonts.com/css/sega-logo-font');
+@import url('https://fonts.cdnfonts.com/css/nrt-reg');
+
+                
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(/img/circuit-pattern.png);
+    background-color: #2b216a;
+    font-family: 'NRT Reg', sans-serif;
+
+}
+
+.header {
+    background-color: #008d2e;
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+}
+
+
+#input {
+    width: 40%;
+    max-width: 360px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 14px;
+    margin-left: 30px;
+}
+
+.logo {
+    font-family: 'SEGA LOGO FONT', sans-serif;
+    color: #fff;
+    font-size: 30px;
+}
+
+.robot {
+    width: 200px;
+    min-height: 200px;
+    background-color: #73e0ce;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(/img/card-pattern.png);
+
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.image {
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    border: none;
+    background-color: #656565;
+    border-radius: 200px;
+}
+
+
+.name {
+    font-size: 20px;
+    font-weight: 700;
+}
