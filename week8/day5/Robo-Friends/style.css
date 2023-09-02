@@ -5,7 +5,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url(/img/circuit-pattern.png);
+    background-image: url(img/circuit-pattern.png);
     background-color: #2b216a;
     font-family: 'NRT Reg', sans-serif;
 
@@ -46,7 +46,7 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-image: url(/img/card-pattern.png);
+    background-image: url(img/card-pattern.png);
 
 }
 
