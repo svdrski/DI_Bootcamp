@@ -5,10 +5,12 @@ let firstdate = document.getElementById('firstdate')
 let seconddate = document.getElementById('seconddate')
 let submit = document.getElementById('submit')
 
-let array = JSON.parse(localStorage.getItem('Array')) || [];
-submit.addEventListener('click', saver)
+let array = JSON.parse(localStorage.getItem('Array')) || [];   // get array from local storage, if empty - create new
+submit.addEventListener('click', saver) 
 console.log(array)
 
+
+//function that push data from form to local storage
 function saver (event) {
     event.preventDefault()
     let data = {
@@ -28,17 +30,3 @@ function saver (event) {
 console.log(JSON.parse(localStorage.getItem('Array')))
 
 
-const toggleButton = document.getElementById('toggleButton');
-const dropdownList = document.getElementById('dropdownList');
-
-// Добавляем обработчик события на кнопку
-toggleButton.addEventListener('click', function () {
-    // Переключаем видимость списка
-    if (dropdownList.classList.contains('hidden')) {
-        dropdownList.classList.remove('hidden');
-        toggleButton.textContent = 'Скрыть список';
-    } else {
-        dropdownList.classList.add('hidden');
-        toggleButton.textContent = 'Показать список';
-    }
-});
