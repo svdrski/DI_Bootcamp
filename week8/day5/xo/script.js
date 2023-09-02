@@ -158,7 +158,6 @@ function minmax (newBoard, player) {
 		newBoard[emSpots[i]] = move.index;
 	    moves.push(move)
 	}
-	
 
 	let bestMove;
 	if(player === compplayer) {
@@ -181,4 +180,5 @@ function minmax (newBoard, player) {
 	return moves[bestMove];
 
 }
+
 

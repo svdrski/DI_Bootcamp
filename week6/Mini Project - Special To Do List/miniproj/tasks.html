@@ -1,16 +1,35 @@
 <!doctype html> 
 <html lang="en"> 
     <head>
+        
         <meta charset="utf-8" />
         <title>Challenge: Mad Libs</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
        </head>
        <body>
 
+        <form  id='form' class="fedit hidden">
+            <input id='name' type="text" placeholder="name">
+            <input id="description"  type="textarea" placeholder="description">
+            <label for="firstdate"> Start date</label>
+            <input id="firstdate" type="datetime-local">
+            <label for="seconddate" > End date</label>
+            <input id="seconddate" type="datetime-local">
+            <input id="submit" type="submit" value="save">
+        </form>
+
         <div id="tasksarea" >
-
-
         </div>
+
+        <div class="link">
+            <a href="index.html" >Add new</a>
+            </div>
+
+
+    
         
     <script src="tasks.js"></script>
     </body> 
