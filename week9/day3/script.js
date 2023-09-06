@@ -1,19 +1,85 @@
-const data = null;
+let formData = new FormData(document.forms.articleBlog);
+console.log([...formData.entries()].join(''))
+let formDataJson = JSON.stringify(Object.fromEntries(formData))
+console.log(formDataJson); 
+//{"title":"Great Article","body":"Article about Javascript"}
 
-const xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
+// send it out
+let xhr = new XMLHttpRequest();
+xhr.open("POST", "https://jsonplaceholder.typicode.com/posts", true);
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.send(formDataJson);
+xhr.onload = () => console.log(JSON.parse(xhr.response));
+// {title: 'Great Article', body: 'Article about Javascript', id: 101}
 
-xhr.addEventListener('readystatechange', function () {
-	if (this.readyState === this.DONE) {
-		console.log(this.responseText);
-	}
-});
 
-xhr.open('GET', 'https://national-weather-service.p.rapidapi.com/zones/%7Btype%7D/%7BzoneId%7D/forecast');
-xhr.setRequestHeader('X-RapidAPI-Key', '7aa4a75b9dmshef2d873f25ffd43p1841adjsn36384864b945');
-xhr.setRequestHeader('X-RapidAPI-Host', 'national-weather-service.p.rapidapi.com');
 
-xhr.send(data);
+// let request = new XMLHttpRequest()
+// request.open('get', 'https://zivuch.github.io/data.json')
+// request.responseType = 'json'
+// request.send()
+// request.onload = () => {
+//     console.log(request.response)
+// }
+
+// request.onload = function() {
+//     if (request.status != 200) {
+//     //   analyze HTTP status of the response
+//     //   e.g. 404: Not Found
+//       console.log(`Error ${xhr.status}: ${xhr.statusText}`);
+//     } else { // show the result
+//     //   response is the server response
+//       console.log(`Done, got ${request.response.length} bytes`);
+//       console.log(request.response);
+//     }
+//   };
+
+
+//   request.onprogress = function(event) {
+//     if (event.lengthComputable) {
+//       console.log(`Received ${event.loaded} of ${event.total} bytes`);
+//     } else {
+//       console.log(`Received ${event.loaded} bytes`); // no Content-Length
+//     }
+//   };
+
+
+// request.onerror = function() {
+//     console.log("Request failed");
+//   };
+  
+
+// let req = new XMLHttpRequest()
+
+// req.open('get', 'https://api.chucknorris.io/jokes/random')
+// req.responseType = 'json'
+// req.send()
+
+// req.onload = function(){
+//     if (req.status !==200) {
+//         alert(`Error ${req.status}: ${req.statusText}`)
+//     } else {
+//         console.log(`Done ${req.response.value}`)
+//     }
+// }
+
+
+// const data = null;
+
+// const xhr = new XMLHttpRequest();
+// xhr.withCredentials = true;
+
+// xhr.addEventListener('readystatechange', function () {
+// 	if (this.readyState === this.DONE) {
+// 		console.log(this.responseText);
+// 	}
+// });
+
+// xhr.open('GET', 'https://national-weather-service.p.rapidapi.com/zones/%7Btype%7D/%7BzoneId%7D/forecast');
+// xhr.setRequestHeader('X-RapidAPI-Key', '7aa4a75b9dmshef2d873f25ffd43p1841adjsn36384864b945');
+// xhr.setRequestHeader('X-RapidAPI-Host', 'national-weather-service.p.rapidapi.com');
+
+// xhr.send(data);
 // // XMLHttpRequest
 
 // let xhr = new XMLHttpRequest();
