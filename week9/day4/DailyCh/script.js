@@ -18,17 +18,20 @@ function search (value) {
             console.log('fail')
         }
     }
-    let render = (value) =>{
-        let block = document.createElement('div')
-        block.classList.add('element')
-        block.innerHTML =
-           `<img src=${value.data.images.original.url} style="width: 200px; height: 200px;">
+}
+
+let render = (value) =>{
+    let block = document.createElement('div')
+    block.classList.add('element')
+    block.innerHTML =
+        `<img src=${value.data.images.original.url} style="width: 200px; height: 200px;">
             <button style="display: block" onclick="deletes(event)">delete</button>`
 
-        container.appendChild(block)
-        console.log(value.data.images.original.url)
-    }
+    container.appendChild(block)
+    console.log(value.data.images.original.url)
 }
+
+
 //// Delete one
 function deletes(event) {
 event.target.parentElement.remove()
