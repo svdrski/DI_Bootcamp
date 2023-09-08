@@ -13,114 +13,76 @@
 <body>
 
     <section class="block1">
-
-    <div class="b1content"> 
-
+    <div class="b1content">
         <h1>Hello ,Welcome To My official Website</h1>
         <p class="mt20">cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
         <button class="btnhello">Hello 🤚</button>
-
     </div>
-
     </section>
-    
-    <section class="portfolio">
 
-        <h2 class="prh">About</h2>
 
+<section class="portfolio">
+    <h2 class="prh">About</h2>
         <div class="blockaboutme">
+            <div class="about about1">
+                <div class="pname">
+                    <img class="photo" src="img/ffsas.png">
+                            <div>
+                                <h2 class="hname"> Hleb Svidzerski</h2>
+                                <h4>S.Web Developer</h4>
+                            </div>
+                </div>
+                <div>
+                    <p style="margin-top: 8%;">ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud .   cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                </div>
+             </div>
+                <div class="about about2">
+                            <h3>Skills</h3>
+                            <ul>
+                                <li>Html</li>
+                                <li>CSS</li>
+                                <li>Html</li>
+                                <li>Javascript</li>
+                                <li>Javascript</li>
+                                <li>CSS</li>
+                                <li>Javascript</li>
+                                <li>Javascript</li>
+                                <li>Html</li>
+                                <li>CSS</li>
+                            </ul>
+                </div>
+                <div class="about about3"></div>
+             </div>
 
-    <div class="about about1"> 
+</section>
 
-<div class="pname">
-    <img class="photo" src="img/ffsas.png">
- <div>
-    <h2 class="hname"> Hleb Svidzerski</h2>
-    <h4>S.Web Developer</h4>
- </div>
 
-</div>
-
+<section class="portfolio">
+    <h2 class="prh">Projects</h2>
     <div>
-        <p style="margin-top: 8%;">ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud .   cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum        </p>
+        <button class="selectors" onclick="render(projects,'all')">All</button>
+        <button class="selectors" onclick="render(projects,'finance')">Finance</button>
+        <button class="selectors" onclick="render(projects,'sport')">Sport</button>
     </div>
+    <div id='projectsblock' class="projectsgrid"></div>
+</section>
 
 
+<section class="portfolio por2">
+    <h2 class="prh2">Blog</h2>
+    <div class="blog">
+        <h3 style="    font-size: 24px;"> New project</h3>
+        <p> Excepteur sint occaecat cupidatat non proident, </p>
+        <a class="readmore" href="">Read more</a>
     </div>
-
-    <div class="about about2">
-
-        <h3>Skills</h3>
-        <ul>
-            <li>Html</li>
-            <li>CSS</li>
-            <li>Html</li>
-            <li>Javascript</li>
-            
-            <li>Javascript</li>
-            <li>CSS</li>
-            <li>Javascript</li>
-            <li>Javascript</li>
-            <li>Html</li>
-            <li>CSS</li>
-            
-
-        </ul>
-
-    </div>
-
-    <div class="about about3">
-        
-    </div>
-
-</div>
-
-    </section>
-
-    <section class="portfolio">
-        <h2 class="prh">Projects</h2>
-
-        <div class="prodgrid">
-
-            <div class="projblock">
-
-            </div>
-
-            <div class="projblock">
-
-            </div>
-
-            <div class="projblock">
-
-            </div>
-
-            <div class="projblock">
-
-            </div>
+    <button class="btnhello mt0">Contact</button>
+</section>
 
 
-        </div>
-
-    </section>
-
-    <section class="portfolio por2">
-        <h2 class="prh2">Blog</h2>
-        <div class="blog">
-            <h3 style="    font-size: 24px;"> New project</h3>
-            <p> Excepteur sint occaecat cupidatat non proident, </p>
-            <a class="readmore" href="">Read more</a>
-        </div>
-
-        <button class="btnhello mt0">Contact</button>
-
-
-    
-    </section>
-
-    
-
-
-
+    <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
