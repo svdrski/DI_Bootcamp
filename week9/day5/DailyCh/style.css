@@ -1,0 +1,14 @@
+.element {
+    display: inline-block;
+    margin: 10px;
+}
+
+.delall{margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    background-color: #c10000;
+    color: #fff;
+    border-radius: 3px;
+    border: none;
+
+}
