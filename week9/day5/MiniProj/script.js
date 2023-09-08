@@ -10,6 +10,7 @@ let archive = []
 
 /// request in celsium or fareng
 let units = 'metric'
+let icon = '°C'
 
 
 // search listener
@@ -64,8 +65,8 @@ function render (response) {
     <span class="cntrycode">${response.sys.country}</span>
     <img id="close" onclick="del(event)" src="img/icons8-close-100.svg"></div>
     <div class="flex mt20">
-          <span class="temperatura">${Math.floor(response.main.temp)}</span>
-          <span class="metric">°C</span>
+          <span class="temperatura">${Math.round(response.main.temp)}</span>
+          <span class="metric">${icon}</span>
           <img src="https://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png">
     </div>
     <p class="wstatus">${response.weather[0].main}</p>
@@ -84,14 +85,16 @@ metricsbutton.addEventListener('click', a =() =>{
     if(metricsbutton.checked) {
         archive.forEach(value => {
             units= 'imperial'
-            value.main.temp = (Math.floor(value.main.temp) * 9/5) + 32
+            icon = '℉'
+            value.main.temp = (Math.round(value.main.temp) * 9/5) + 32
             console.log(value.main.temp)
             render(value)
         })
     } else  {
         archive.forEach(value => {
             units = 'metric'
-            value.main.temp = (Math.floor(value.main.temp) - 32) * 5/9
+            icon = '°C'
+            value.main.temp = (Math.round(value.main.temp) - 32) * 5/9
             console.log(value.main.temp)
             render(value)
         })
