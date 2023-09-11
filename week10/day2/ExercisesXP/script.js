@@ -1,18 +1,17 @@
 // Ex1
-// function compareToTen(num){
-//    const result =  new Promise((resolve, reject) => {
-//         num <= 10 ? resolve(num) : reject ('error: value is greater')
-//     })
-//     return result
-// }
-//
-// compareToTen(15)
-//     .then(result => console.log(result))
-//     .catch(error => console.log(error))
-//
-// compareToTen(8)
-//     .then(result => console.log(result))
-//     .catch(error => console.log(error))
+function compareToTen(num){
+   return new Promise((resolve, reject) => {
+        num <= 10 ? resolve(num) : reject ('error: value is greater')
+    })
+}
+
+compareToTen(15)
+    .then(result => console.log(result))
+    .catch(error => console.log(error))
+
+compareToTen(8)
+    .then(result => console.log(result))
+    .catch(error => console.log(error))
 
 
 // Ex2
