@@ -56,7 +56,7 @@ function render(object, type) {
     })
     this.event.target.style.backgroundColor = '#7736f0'
     this.event.target.style.color = '#fff'
-    
+
 }
 
 render(projects, 'all')
