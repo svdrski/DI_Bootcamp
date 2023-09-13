@@ -95,12 +95,17 @@ const urls = [
 ];
 
 const getData = async function() {
-   let response =  await Promise.all(urls)
-    for (let item of response) {
-        let getResponse = await fetch(item)
-        getResponse = await getResponse.json()
-        console.log(getResponse)
+    try {
+        let response =  await Promise.all(urls)
+            for (let item of response) {
+                let getResponse = await fetch(item)
+                getResponse = await getResponse.json()
+                console.log(getResponse)
     }
+    } catch (e){
+        console.error('ОШИБКА', e);
+    }
+   
 }
 
 
