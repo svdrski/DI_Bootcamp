@@ -14,23 +14,23 @@
 
 
 
-// Ex2
+Ex2
 
-// function resolveAfter2Seconds() {
-//     return new Promise(resolve => {
-//         setTimeout(() => {
-//             resolve('resolved');
-//         }, 2000);
-//     });
-// }
-// // returned resolved promise after 2 seconds
-//
-// async function asyncCall() {
-//     console.log('calling');
-//     let result = await resolveAfter2Seconds();
-//     console.log(result);
-// }
-// asyncCall();
-//
-// // 1. console log - calling
-// // 2. return result as 'resolved'
+function resolveAfter2Seconds() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve('resolved');
+        }, 2000);
+    });
+}
+// returned resolved promise after 2 seconds
+
+async function asyncCall() {
+    console.log('calling');
+    let result = await resolveAfter2Seconds();
+    console.log(result);
+}
+asyncCall();
+
+// 1. console log - calling
+// 2. return result as 'resolved'
