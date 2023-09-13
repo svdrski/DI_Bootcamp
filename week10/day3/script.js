@@ -1,3 +1,24 @@
+const req = fetch('https://api.chucknorris.io/jokes/random?category=movie')
+    .then(value => {
+        if(value.ok) {
+            return value.json()
+        } else  {
+            throw new Error('wrong url')
+        }
+    })
+    .then(a => console.log(a.value))
+
+async function x() {
+    let req = await fetch('https://api.chucknorris.io/jokes/random?category=movie')
+    req = await req.json()
+    console.log(req.value)
+}
+
+x()
+
+
+
+
 // async function simple() {
 //     return new  Promise((resolve, reject) => {
 //         setTimeout(()=> {
@@ -50,33 +71,33 @@
 
 
 
-const  timeout = async (milsec, id) => {
-    await new  Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log(id, 'done')
-            resolve()
-        },milsec)
-    })
-}
-
-
-
-async function x(){
-    console.log('before')
-        // Не использовать for each
-    ['first','second','third'].forEach(async (item) => {
-        await timeout(2000, item)
-    })
+// const  timeout = async (milsec, id) => {
+//     await new  Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log(id, 'done')
+//             resolve()
+//         },milsec)
+//     })
+// }
+//
+//
+//
+// async function x(){
+//     console.log('before')
+//         // Не использовать for each
+//     ['first','second','third'].forEach(async (item) => {
+//         await timeout(2000, item)
+//     })
 
     // for (item of ['first','second','third']) {
     //     await timeout(2000, item)
     // }
 
-
-    console.log('afree')
-}
-
-x()
+//
+//     console.log('afree')
+// }
+//
+// x()
 // async  let a = fetch('https://jsonplaceholder.typicode.com/users')
 
 
