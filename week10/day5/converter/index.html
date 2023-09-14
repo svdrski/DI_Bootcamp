@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Work+Sans:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="contentBox">
+    <h2>Currency Converter</h2>
+
+    <label for="from">From</label>
+    <select id="from" name="from" class="selector">
+        <option>Select Currency</option>
+    </select>
+
+    <label for="to" class="mt16">To</label>
+    <select id="to" name="to" class="selector">
+        <option>Select Currency</option>
+    </select>
+
+    <span class="swtch" onclick="switchvalue ()">Switch</span>
+
+    <form id="search">
+        <input id="val" name="val" type="text" class="input" placeholder="0">
+        <input type="submit" value="Convert" class="submit">
+    </form>
+
+    <div id="result">
+        /
+    </div>
+</section>
+
+<script src="https://kit.fontawesome.com/3aeb2e4dad.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
