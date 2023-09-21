@@ -1,0 +1,19 @@
+{
+  "name": "xpninja2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "date.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^2.30.0",
+    "date-holidays": "^3.22.0",
+    "date-prompt": "^1.0.0",
+    "node-holidays": "^1.1.4"
+  }
+}
