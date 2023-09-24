@@ -1,0 +1,5 @@
+form {
+    flex-direction: column;
+    width: 300px;
+    display: flex;
+}
