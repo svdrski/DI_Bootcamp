@@ -15,7 +15,6 @@ app.listen(4444, ()=> console.log("Listening on 4444"))
 
 app.use(express.json())
 const staticPath = path.join(__dirname, 'front');
-
 app.use(express.static(staticPath));
 app.use(express.urlencoded({extended:true}));
 
