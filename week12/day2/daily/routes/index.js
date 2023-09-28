@@ -2,7 +2,7 @@ const express = require('express')
 const path = require('path')
 const routes = express.Router()
 routes.use(express.json())
-routes.use(express.static('public'));
+routes.use('/', express.static('public'));
 routes.use(express.urlencoded({ extended: true }));
 
 
@@ -35,8 +35,7 @@ let gamestatus = {
 }
 
 routes.get('/quiz', (req, res) => {
-    const indexPath = path.join(__dirname, '../public/index.html');
-    res.sendFile(indexPath);
+    res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
 routes.get('/quiz/start', (req, res) => {
