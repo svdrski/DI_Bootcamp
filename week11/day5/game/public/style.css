@@ -1,0 +1,41 @@
+#field{
+    display: flex;
+    width: 520px;
+    flex-wrap: wrap;
+}
+
+#search{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#find{
+    background-color: #5bb441;
+    border: none;
+    height: 135px;
+    font-size: 40px;
+    width: 430px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.cell{
+    height: 50px;
+    width: 50px;
+    background-color: #f2f2f2;
+    border: 1px solid;
+}
+
+.nav{
+    width: 30px;
+    height: 30px;
+}
+
+#gamearea{
+    display: none;
+}
+
+#winner{
+    display: none;
+}

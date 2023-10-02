@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h3 id="title"></h3>
+    <h3 id="opponentname"></h3>
+
+  <button id='logout'>Log out</button>
+  
+  <h1 id='winner'></h1>
+
+  <div id="gamearea">
+    <div id='field'> </div>
+      <button id='up' class="nav">↑</button>
+       <button id='down' class="nav">↓</button>
+        <button id='right' class="nav">→</button>
+          <button id='left' class="nav">←</button>
+  </div>
+
+  
+
+  <div id='search'>
+  <button id='find'>search opponent</button>
+  <img id='load' style=" display: none; margin-top:20px; height: 30px; width: 30px" src="../IMG/s.gif">
+  </div>
+  
+
+        
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+
+  </script>
+  
+<script src="./js/game.js"></script>
+</body>
+</html>
