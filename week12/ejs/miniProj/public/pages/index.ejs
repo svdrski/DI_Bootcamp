@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<%- include('../partials/head'); %>
+  </head>
+  <body>
+  <%- include('../partials/header'); %>
+ 
+<section class="content">
+<h1>The facts site</h1>
+<p>Welcome to the fact site</p>
+<h2>Posts</h2>
+   <div class="feed">
+    <% for (let item of feed.items) { %>
+        <div class="item">
+        <h3><a target="blank" href="<%=item.link%>"><%= item.title%></a></h3>
+        <div class="info"><span><%= item.pubDate%> | </span>
+             <span><%= item.creator%> | </span>
+             <span>Categories: <b><%= item.categories %> </b> </span>
+        </div>
+        <p><%=item.contentSnippet%></p>
+        </div>
+    <%}%>
+    </div>
+ </section>
+    
+
+ <%- include('../partials/footer'); %>
+  </body>
+</html>

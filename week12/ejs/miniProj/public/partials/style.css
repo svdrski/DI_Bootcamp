@@ -1,0 +1,109 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    font-size: 53px;
+}
+
+h2{
+    margin-top: 50px !important;
+    font-size: 30px;
+}
+
+h1,h2,h3,h4,h5,p, div, body {
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    font-size: 22px;
+    margin-right: 40px;
+}
+.navi{
+    height: 60px;
+    background-color: #e3e3e3;
+    padding: 0 60px;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: #000;
+    font-weight: 300;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.content{
+    max-width: 70%;
+    padding: 60px;
+    margin-top: 60px;
+}
+
+.feed{
+    margin-top: 20px;
+}
+.item {
+    margin-bottom: 60px;
+}
+
+.item a {
+    text-decoration: none;
+    color: #336fbe;
+    font-size: 19px;
+}
+
+.item a:hover {
+    text-decoration: underline;
+}
+
+.item p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.info{
+    font-size: 13px;
+    color: #717171;
+    margin: 4px 0;
+}
+
+
+.footer{
+    text-align: center;
+    margin: 20px;
+    font-size: 12px;
+
+}
+
+#contentbox{
+    margin-top: 100px;
+    display: flex;
+    padding: 20px 60px;
+}
+
+#contentbox label{
+display: block;
+}
+
+#searchbox{
+    background-color: #dbdbdb;
+    height: 150px;
+    padding: 30px;
+    box-sizing: content-box;
+    border-radius: 10px;
+    min-width: 20%;
+}
+
+#requestbox{
+    padding: 40px;
+    width: 100%;
+    background-color: #eeeeee;
+    border-radius: 10px;
+    margin-left: 30px;
+}

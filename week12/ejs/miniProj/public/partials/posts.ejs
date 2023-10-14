@@ -1,0 +1,15 @@
+   <div class="feed">
+   <% if(data.length > 0) {%>
+    <% for (let item of data) { %>
+        <div class="item">
+        <h3><a target="blank" href="<%=item.link%>"><%= item.title%></a></h3>
+        <div class="info"><span><%= item.pubDate%> | </span>
+             <span><%= item.creator%> | </span>
+             <span>Categories: <b><%= item.categories %> </b> </span>
+        </div>
+        <p><%=item.contentSnippet%></p>
+        </div>
+    <%}} else {%>
+    <p>0 Results</p>
+    <% } %>
+    </div>
