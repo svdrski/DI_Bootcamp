@@ -1,0 +1,144 @@
+body{
+    font-family: 'Urbanist', sans-serif;
+}
+
+h1{
+    font-size: 44px;
+    font-weight: 500;
+}
+
+body, h1, h2, div, input {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+#registration{
+    width: 400px;
+    margin-top: 30px;
+}
+
+#login{
+    width: 350px;
+    margin-top: 30px;
+}
+
+
+#auth{
+    height: 100vh;
+    display: flex;
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#authImg{
+    background-image: url('/static/room11.jpg');
+    background-position: center;
+    height: calc(100vh - 60px);
+    max-width: 50%;
+    width: 50%;
+    min-width: 400px;
+    border-radius: 22px;
+}
+
+.input_auth {
+    border-radius: 8px;
+    border: 1px solid #E3E3E3;
+    padding-left: 15px;
+    font-size: 13px;
+    font-weight: 300;
+    width: 100%;
+    height: 50px;
+    margin-top: 12px;
+    box-sizing: border-box;
+}
+
+
+#authInput{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    width: 50%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    min-width: 400px;
+    
+}
+
+.twoinpt{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#loading{
+        background-image: url('/static/circle-loader.gif');
+        height: 50px;
+        margin-bottom: -30px;
+        width: 50px;
+        background-size: cover;
+        margin-left: calc(50% - 25px);
+        display: none;
+}
+
+.regbtn{
+    width: 100%;
+    height: 50px;
+    margin-top: 40px;
+    border-radius: 8px;
+    border: none;
+    background-color: #FE662F;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: .2s;
+}
+
+.regbtn:hover{
+    background-color: #B93100;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#reg_error{
+    display: none;
+    height: 50px;
+    background-color: #FDF3F3;
+    border-radius: 8px;
+    margin-top: 10px;
+    align-items: center;
+    font-size: 14px;
+    padding-left: 20px;
+    color: #EC3F3F;
+}
+
+.already{
+    color: #585858;
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 60px;
+}
+
+
+.link_black{
+    color: #303030;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .2s;
+}
+.link_black:hover{
+    text-decoration: underline;
+    transition: .2s;
+}
+
+.mr8{
+    margin-right: 8px;
+}
