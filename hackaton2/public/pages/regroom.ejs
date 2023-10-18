@@ -5,11 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit new room</title>
     <%- include('../partials/head'); %>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 </head> 
 <body>
-    <%- include('../partials/head'); %>
+    <%- include('../partials/header'); %>
 
-    
-    <script src="partials/js/regroom.js"></script>
+<section class="contentBox">
+    <h1>Submit new room</h1>
+    <form>
+      <div id='section1'>
+          <h3 class="mt60">Address</h3>
+        <input id="pacinput" class="controls regInput wp60" name="address" location="" type="text" placeholder="Search Box"/>
+        <div id="map"></div>
+      </div>
+
+      <div id='section2'>
+          <h3 class="mt60">Information</h3>
+          <input type="text" class="regInput" name="title" id="title" placeholder="Title">
+          <textarea name="description" class="regInput descarea" placeholder="Description"></textarea>
+              <select name="type" class="regInput" id="cars">
+                  <option value="" disabled selected>Apartment type</option>
+                  <option value="Apartments">Apartments</option>
+                  <option value="House">House</option>
+                  <option value="Guesthouses">Guesthouses</option>
+                  <option value="Condominium">Condominium</option>
+                  <option value="Hostel">Hostel</option>
+              </select>
+           <input type="number" name="size" class="regInput" placeholder="Room Size (m)">
+
+           <h4>Comfort</h4>
+           <div>
+                <label class="checkbox-button">
+                    <input type="checkbox" name="Conditioning" id="Conditioning">
+                    <span class="checkmark">Air Conditioning</span>
+               </label>
+                    <label class="checkbox-button">
+                        <input type="checkbox" name="Storage" id="Storage">
+                        <span class="checkmark">Storage</span>
+                   </label>
+                        <label class="checkbox-button">
+                            <input type="checkbox" name="Laundry" id="Laundry">
+                            <span class="checkmark">Laundry</span>
+                       </label>
+                            <label class="checkbox-button">
+                                <input type="checkbox" name="Dishwasher" id="Dishwasher">
+                                <span class="checkmark">Dishwasher</span>
+                           </label>
+                                 <label class="checkbox-button">
+                                    <input type="checkbox" name="Pool" id="Pool">
+                                    <span class="checkmark">Pool</span>
+                                </label>
+                                        <label class="checkbox-button">
+                                            <input type="checkbox" name="Bathroom" id="Bathroom">
+                                            <span class="checkmark">Private Bathroom</span>
+                                        </label>
+                                            <label class="checkbox-button">
+                                                <input type="checkbox" name="Parking" id="Parking">
+                                                <span class="checkmark">Parking</span>
+                                             </label>
+                                                 <label class="checkbox-button">
+                                                    <input type="checkbox" name="Elevator" id="Elevator">
+                                                    <span class="checkmark">Elevator</span>
+                                                 </label>
+                                                         <label class="checkbox-button">
+                                                            <input type="checkbox" name="Entrance" id="Entrance">
+                                                            <span class="checkmark">Private Entrance</span>
+                                                         </label>
+                                                         </div>
+      </div>
+
+       <div id='section3'>
+          <h3 class="mt60">Availability</h3>
+          <label class="lbl" for="availability">Available to check in:</label>
+          <input type="date" class="regInput ff" name="availability">
+
+          <label class="lbl" for="rate">Monthly Rental rate ILS:</label>
+          <input type="number" class="regInput ff" name="rate">
+      </div>
+
+      <div id='section4'>
+          <h3 class="mt60">Household</h3>
+          <div class="dfc">
+          <img id="previewImage" src="/static/user_profile.svg" alt="Image Preview">
+          <input type="file" id="fileInput" accept="image/*">
+          </div>
+
+
+      </div>
+
+        <input type="submit" value="send">
+    </form>
+
+
+
+</section>
+
+
+<div id="regNav">
+    <button id='showprev'>Back</button>
+        <span id='regstatus'> 1/10</span>
+    <button id='shownext'>Next</button>
+</div>
+
+
+  <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKGFictnuSaDxWQUHfaJ8hLASGPM8lVHk&language=en&callback=initAutocomplete&libraries=places&v=weekly"
+      defer
+    ></script>
+        <script src="/partials/js/map.js"></script>
+            <script src="/partials/js/regroom.js"></script>
 </body>
 </html>

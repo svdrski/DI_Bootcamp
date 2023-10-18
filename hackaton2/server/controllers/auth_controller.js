@@ -29,7 +29,7 @@ class auth {
             if (mail.length > 0) { return res.status(410).json('This email is already in use')}
             
             const id = uuidv4()
-            const imgurl = '/static/user_profile.jpeg'
+            const imgurl = '/static/user_profile.svg'
             //encrypting password
              bcrypt.hash(password1, saltRounds, (err, cryptPass)=> {
                  if(err) {res.status(500).json('Error ' + err)}
