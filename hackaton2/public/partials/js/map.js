@@ -84,11 +84,7 @@ map.addListener('click', function(event) {
         if (status === 'OK') {
             if (results[0]) {
                 const address = results[0].formatted_address;
-
                 input.value = address;
-                
-                console.log(results[0])
-
                 clearMarkers()
                 addMarker(clickedLocation)
 //                setlocation(clickedLocation)
@@ -103,48 +99,66 @@ map.addListener('click', function(event) {
              } else { alert('Ошибка геокодирования: ' + status);}
     });
 });
-//
-//
-//function setlocation(location) {
-//  input.setAttribute('location', JSON.stringify(location))
-//}
-  
+
+
+
+
   const geocoder = new google.maps.Geocoder();
 
 document.forms[0].addEventListener('submit', async (e)=>{
   e.preventDefault()
-  let data = new FormData(e.target)
-  data = Object.fromEntries(data)
-  
+  let formData = new FormData(e.target)
+
+//  const photoInput = document.getElementById('phinput');
+//  for (const file of photoInput.files) {
+//    formData.append('phinput', file);
+//  }
+
+//  const profimg = document.getElementById('fileInput');
+//    formData.append('fileInput', profimg.files);
+//
+
   /// create array of comforts and send as array
   const comfort = []
   const comforts = ['Conditioning', 'Storage', 'Laundry', 'Dishwasher', 'Pool', 'Bathroom', 'Parking', 'Elevator', 'Entrance']
-  for (a in data) {
+  const search = Object.fromEntries(formData)
+  for (a in search) {
     if(comforts.includes(a)){
       comfort.push(a)
-      delete data[a]}
+      delete search[a]}
   }
-  data.comforts = comfort
+  formData.append('comforts', comfort);
   
-  console.log(data)
-  
+
   /// send location data as array with all information
-  await geocoder.geocode({ address: data.address }, function  (results, status) {
+  await geocoder.geocode({ address: search.address }, function  (results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
       if (results.length > 0) {
-        data.address = results[0]
+        console.log([results[0]])
+        formData.append('address', JSON.stringify(results[0]));
+
+//        data.address = results[0]
       }
     } else {console.error("Error: " + status); }
   });
 
+
+  let key = localStorage.getItem('key')
   const response = await fetch('/add/room', {
     method:'POST',
-    headers:{'Content-Type':'application/json'},
-    body: JSON.stringify(data)
-  })
+     headers: {
+//    'Content-Type': 'application/json',
+       'Authorization': `${key}`
+     },
+    body: formData
+  }).then(a => a.json()).then(a=>console.log(JSON.parse(a[1])))
 })
+
+
 
 
 }
 
 window.initAutocomplete = initAutocomplete;
+
+

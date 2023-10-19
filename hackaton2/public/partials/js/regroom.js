@@ -1,18 +1,27 @@
-let currentSection = 1
 
+
+let currentSection = 1
 document.getElementById('shownext').addEventListener('click', showNext)
 document.getElementById('showprev').addEventListener('click', showPrev)
 function showNext(){
+    if(currentSection === 6) {
+        document.getElementById('shownext').style.display = 'none'
+        document.getElementById('finreg').style.display = 'block'
+    }
     document.getElementById(`section${currentSection}`).style.display = 'none'
     currentSection += 1
-    document.getElementById('regstatus').innerText = `${currentSection}/10`
+    document.getElementById('regstatus').innerText = `${currentSection}/7`
     document.getElementById(`section${currentSection}`).style.display = 'flex'
 }
 
 function showPrev(){
+    if(currentSection === 7) {
+        document.getElementById('shownext').style.display = 'block'
+        document.getElementById('finreg').style.display = 'none'
+    }
     document.getElementById(`section${currentSection}`).style.display = 'none'
     currentSection -= 1
-    document.getElementById('regstatus').innerText = `${currentSection}/10`
+    document.getElementById('regstatus').innerText = `${currentSection}/7`
     document.getElementById(`section${currentSection}`).style.display = 'flex'
 }
 
@@ -37,16 +46,32 @@ fileInput.addEventListener('change', function () {
 
 
 
+const range = document.getElementById("maxpeople");
+const rangeValue = document.getElementById("rangeValuepl");
+range.addEventListener("input", () => {
+    rangeValue.textContent = range.value;
+});
 
-//document.forms[0].addEventListener('submit', async (e)=>{
-//    e.preventDefault()
-//    let data = new FormData(e.target)
-//    data = Object.fromEntries(data)
-//    data.address = JSON.parse(document.getElementById('pacinput').getAttribute('location'))
+
+const range2 = document.getElementById("age");
+const rangeValue2 = document.getElementById("rangeValueal");
+range2.addEventListener("input", () => {
+    rangeValue2.textContent = range2.value;
+});
+
+
+function preview(elem, output = '') {
+    Array.from(elem.files).map((file) => {
+        const blobUrl = window.URL.createObjectURL(file)
+        output+=`<img src=${blobUrl}>`
+    })
+    elem.nextElementSibling.innerHTML = output
+}
+
 //
-//    const response = await fetch('/add/room', {
-//        method:'POST',
-//        headers:{'Content-Type':'application/json'},
-//        body: JSON.stringify(data)
-//    })
-//})
+//  document.getElementById('finreg').addEventListener('click', function(event) {
+//      event.preventDefault();
+//      console.log('aaa');
+//      const form = document.forms[0];
+//      form.submit();
+//  });

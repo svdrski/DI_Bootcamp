@@ -23,6 +23,8 @@ document.getElementById('login').addEventListener('submit', async  (e)=> {
             loading.style.display = 'none'
             const resp = await respose.json()
             console.log(resp)
+            localStorage.setItem('key', JSON.stringify(resp))
+            window.location.href ='/add/room'
         } else {
             delError()
             loading.style.display = 'none'

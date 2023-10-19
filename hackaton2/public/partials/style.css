@@ -2,6 +2,7 @@ body{
     font-family: 'Urbanist', sans-serif;
     background-color:#FAFAFA;
     padding: 60px 0 0 0;
+    margin: 0;
 }
 
 .contentBox{
@@ -119,6 +120,7 @@ nav a {
 
 
 #auth{
+    margin-top: -60px;
     height: 100vh;
     display: flex;
     padding: 30px;
@@ -268,6 +270,11 @@ nav a {
 }
 
 
+.petsinpt{
+    width: 100%;
+    margin-left: 20px;
+}
+
 
 
 #regNav{
@@ -296,10 +303,11 @@ nav a {
 }
 
 #previewImage{
-    width: 120px;
-    height: 120px;
-    border-radius: 21px;
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
     object-fit: cover;
+    margin: 20px 0;
 }
 
 
@@ -310,8 +318,7 @@ nav a {
     transition: .2s;
 }
 
-
-#shownext{
+.registrbtn{
     background-color: #FE662F;
     height: 50px;
     width: 100px;
@@ -321,27 +328,50 @@ nav a {
     color: #fff;
     text-transform: uppercase;
     transition: .2s;
-
 }
 
-#shownext:hover{
+#finreg{
+display: none;
+width: 200px;
+transition: .2s;
+}
+
+#shownext:hover, #finreg:hover{
     background-color:#B93100;
     cursor: pointer;
     transition: .2s;
 }
 
+#age, #maxpeople{
+    width: 100%;
+}
 
-
-#section1, #section4{
+#section1, #section4, #section5, #section6{
     flex-direction: column;
 }
-#section2, #section3{
+ #section3{
     flex-direction: column;
     max-width: 300px;
 }
 
-#section2, #section3, #section4{
+#section2, #section3, #section4, #section5, #section6, #section7{
     display: none;
+}
+
+
+#section2, #section5, #section6, #section7{
+    width: 380px;
+    flex-direction: column;
+}
+
+#section4{
+    max-width: 460px;
+}
+
+#section7{
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 9px;
 }
 
 
@@ -374,7 +404,7 @@ nav a {
     border-radius: 8px;
     margin: 4px 4px 4px 0;
     color: #313131;
-    font-size: 14px;
+    font-size: 15px;
     transition: background-color 0.3s;
 }
 
@@ -387,7 +417,71 @@ nav a {
     color: #424242;
     font-weight: 400;
     margin: 20px 0 10px 0;
+    display: block;
 }
+
+
+#fileInput, .phinput {
+    visibility: hidden;
+}
+
+.uplimg{
+    height: 40px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    background-color: #E7E5F3;
+    width: 100%;
+    border-radius: 8px;
+    transition: .2s;
+    justify-content: center;
+    transition: .2s;
+}
+
+.uplimg:hover{
+    cursor: pointer;
+    background-color:#B5B1D0;
+    transition: .2s;
+}
+
+
+.uplprof{
+    height: 40px;
+    width: 100px;
+    color: #000;
+    display: flex;
+    text-decoratuion: underline;
+    align-items: center;
+    margin-left: 30px;
+    transition: .2s;
+
+}
+.uplprof:hover{
+    cursor: pointer;
+    font-weight: 700;
+    transition: .2s;
+}
+
+#rangeInput {
+    width: 100%;
+}
+
+
+
+.preview-area{
+    display: flex;
+    flex-wrap: wrap;
+}
+.preview-area img{
+    margin: 7px;
+    width: 176px;
+    border-radius: 5px;
+    height: 126px;
+    object-fit: cover;
+}
+.preview-area img:not(:nth-child(4n)){
+}
+
 
 
 
@@ -405,6 +499,10 @@ nav a {
     margin-right: 8px;
 }
 
+.mr14{
+    margin-right: 14px;
+}
+
 .mt60{
     margin-top: 60px;
 }
@@ -418,10 +516,24 @@ nav a {
     align-items: center;
 }
 
+.dfb{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
 .ff {
     font-family: 'Urbanist', sans-serif;
 }
 
+
+.w100{
+    width: 100px;
+}
+
+.w100p{
+    width: 100%;
+}
 
 
 

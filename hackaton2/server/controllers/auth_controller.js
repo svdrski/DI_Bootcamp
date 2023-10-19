@@ -3,9 +3,15 @@ const bcrypt = require('bcrypt')
 const { v4: uuidv4 } = require('uuid');
 const jwt = require('jsonwebtoken');
 const {json} = require("express");
+const multer  = require('multer')
+const upload = multer({ dest: 'uploads/' })
 const saltRounds = 10
 class auth {
     
+    static checktoken (req, res) {
+
+    }
+
     static RegPage (req, res) {
         res.render('registration')
     }
@@ -44,7 +50,6 @@ class auth {
     
     static async Login (req, res) {
         const {email, password} = req.body
-        console.log(email, password)
         
         //check email
         const user = await model.GetUser(email)
@@ -53,7 +58,7 @@ class auth {
         //check password
         if(!bcrypt.compareSync(password, user[0].password)) {return res.status(409).json('Wrong password')}
         
-        const token = jwt.sign(user[0].email, 'roommates')
+        const token = jwt.sign({email: user[0].email}, 'roommates')
         res.json(token)
     }
     

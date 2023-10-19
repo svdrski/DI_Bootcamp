@@ -20,7 +20,7 @@ document.getElementById('registration').addEventListener('submit', async  (e)=> 
         if(respose.ok) {
             delError()
             loading.style.display = 'none'
-            console.log('ok')
+            window.location.href ='/login'
         } else {
             delError()
             loading.style.display = 'none'
