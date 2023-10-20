@@ -2,6 +2,7 @@ const express = require('express')
 const auth = require('../controllers/auth_controller.js')
 const reg = require('../controllers/reglistings_controller.js')
 const fetch = require('../controllers/getdata_controller.js')
+const search = require('../controllers/search_controller.js')
 const check_auth = require('../middlewares/auth.js')
 const upload = require('../middlewares/uploads.js')
 const path = require('path')
@@ -28,6 +29,11 @@ router.get('/add/room', reg.Page)
 router.post('/add/room',upload.fields([{ name: 'phinput', maxCount: 10 }, { name: 'fileInput', maxCount: 1 }]), reg.Room)
 
 router.get('/room/:id', fetch.Room)
+router.get('/roomdata/:id', fetch.RoomData)
+
+
+router.get('/search', search.Open )
+router.get('/search/getlist', search.GetList)
 
 
 

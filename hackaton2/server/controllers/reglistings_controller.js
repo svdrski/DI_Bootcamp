@@ -14,23 +14,24 @@ class reg {
         token = JSON.parse(token)
         const decoded = jwt.verify(token, 'roommates')
         const email = decoded.email
-        const { address, age, availability, cleanliness, comforts, description,
+            const { address,size, age, availability, cleanliness, comforts, description,
             fileInput, getup, gotobed, maxage, maxpeople, name, people_in_household,
             pets, petspref, phinput, rate, schedule, smokepref, smoker, title, type
         } = req.body
 
+        const fulladdress =  JSON.parse(address[1]).formatted_address
         const city = JSON.parse(address[1]).address_components[2].long_name
         const longitude = JSON.parse(address[1]).geometry.location.lng
         const attitude  = JSON.parse(address[1]).geometry.location.lat
 
         const id = uuidv4()
-        const newroom = await room.Register( id, email, city, longitude, attitude, age, availability,title, description, comforts,cleanliness, getup, gotobed, maxage, maxpeople, name, people_in_household, pets, petspref, rate, schedule, smokepref, smoker, type)
-
+            const newroom = await room.Register( id, fulladdress, email,size, city, longitude, attitude, age, availability,title, description, comforts,cleanliness, getup, gotobed, maxage, maxpeople, name, people_in_household, pets, petspref, rate, schedule, smokepref, smoker, type)
 
                 if(req.files.fileInput) {
                     const profile_img = req.files.fileInput[0].path.replace('../public', '')
                     try{
-                        const profimg = await room.SendProfileImg(id, profile_img )
+                        await room.SendProfileImg(id, profile_img )
+
                     } catch (e) {console.log('Error ' + e)}
                 }
 
@@ -40,12 +41,10 @@ class reg {
                         room_img.push(a.path.replace('../public', ''))
                     })
                     try{
-                        const photos = await room.SendPhoto(id, room_img)
+                        await room.SendPhoto(id, room_img)
                     } catch (e) {console.log('Error ' + e)}
                 }
-
-
-            res.json(newroom)
+            res.json(newroom[0].id)
         } catch (e) {console.log('Error ' + e)}
 
 

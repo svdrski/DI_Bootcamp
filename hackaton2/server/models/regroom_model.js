@@ -21,14 +21,14 @@ class room {
 
 
 
-    static async Register (id, email, city, longitude, attitude, age,
+    static async Register (id,fulladdress, email,size, city, longitude, attitude, age,
                                    availability,title, description, comforts,
                                    cleanliness, getup, gotobed, maxage, maxpeople,
                                    name, people_in_household, pets, petspref, rate,
                                    schedule, smokepref, smoker, type ){
 
     try{
-        return  await   db('rooms').insert({id, email, city, longitude, attitude,
+        return  await   db('rooms').insert({id,fulladdress, email,size, city, longitude, attitude,
             age, availability,title, description, comforts,cleanliness, getup, gotobed,
             maxage, maxpeople, name, people_in_household, pets, petspref, rate, schedule,
             smokepref, smoker, type}, ['*'])

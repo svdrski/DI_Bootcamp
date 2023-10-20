@@ -35,8 +35,7 @@ function initAutocomplete() {
     markers = [];
   }
 
-  // Listen for the event fired when the user selects a prediction and retrieve
-  // more details for that place.
+
   searchBox.addListener("places_changed", () => {
     const places = searchBox.getPlaces();
 
@@ -151,7 +150,13 @@ document.forms[0].addEventListener('submit', async (e)=>{
        'Authorization': `${key}`
      },
     body: formData
-  }).then(a => a.json()).then(a=>console.log(JSON.parse(a[1])))
+  })
+
+  const url =  await response.json()
+  window.location.href = `/room/${url}`
+
+// }).then(a => a.json()).then(window.location.href = `/room/${a}`)
+  
 })
 
 

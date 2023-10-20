@@ -23,6 +23,11 @@ h1{
     font-weight: 500;
 }
 
+h2{
+    font-size: 42px;
+    font-weight: 400;
+}
+
 h3{
     font-size: 20px;
     font-weight: 600;
@@ -483,6 +488,328 @@ transition: .2s;
 }
 
 
+#roomblock{
+    display: flex;
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+
+#contentblock{
+    width: 54%;
+    height: 100%;
+    max-width: 700px;
+}
+
+#photoblock{
+    width: 46%;
+    max-width: 550px;
+    height: 100%;
+}
+
+.rimg1{
+    width: 100%;
+    border-radius: 18px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.twophotos{
+    display: flex;
+    box-sizing: border-box;
+    padding: 10px 0;
+    width: 100%;
+    min-height: 170px;
+    justify-content: space-between;
+}
+
+.smallimg{
+    width: 50%;
+    max-width: calc(50% - 6px);
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+
+.fulladdress{
+    color: #313131;
+    font-size: 14px;
+    margin-top: 14px;
+}
+
+
+.price{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+.ownprof{
+    display: flex;
+    width: 250px;
+        padding: 10px;
+    height: 100px;
+    background-color: #F4F4F4;
+    border-radius: 18px;
+}
+
+
+.profimg{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.nameprof{
+    font-weight: 700;
+    margin-top: 13px;
+    font-size: 18px;
+}
+
+.call:hover{
+    transition: .2s;
+    border-radius: 200px;
+    cursor: pointer;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+.owninform{
+    font-size: 14px;
+    margin: -7px 0 0 40px;
+}
+
+.owner{
+    display: flex;
+}
+
+.inf{
+    margin: 12px;
+    color: #454545;
+}
+
+
+.features{
+    display: flex;
+    margin-top: 50px;
+}
+
+.features p{
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.descript{
+    max-width: 80%;
+    font-size: 15px;
+    word-spacing: 2px;
+    color: #6f6f6f;
+    line-height: 1.4;
+    margin-top: 7px;
+}
+
+
+.infoblock{
+    background-color: #F4F4F4;
+    padding: 0 30px;
+    width: auto;
+    display: inline-block;
+    margin-top: 30px;
+    border-radius: 130px;
+}
+
+.infoblock p {
+    display: inline-block;
+}
+
+
+.line{
+    display: block;
+    width: 80%;
+    height: 1px;
+    margin: 40px 0;
+    background-color: #d8d8d8;
+}
+
+.fetr{
+    background-color: #F4F4F4;
+    display: inline-block;
+    margin-right: 5px;
+    padding: 11px 16px;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+
+#maproom{
+    position: relative;
+    overflow: hidden;
+    height: 320px;
+    max-width: 80%;
+    border-radius: 18px;
+}
+
+
+
+
+#searchbox{
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+
+
+#content{
+    height: 95%;
+        padding: 40px 0 0 0;
+    width: 52%;
+    margin-left: 50px;
+}
+
+#contents{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    align-content: flex-start;
+    margin-top: 20px;
+    margin-left: -10px;
+
+
+}
+
+.cardimg{
+    width: 100%;
+    border-radius: 18px;
+    height: 160px;
+    object-fit: cover;
+}
+
+#roomcard{
+    width: 28%;
+    min-width: 260px;
+    margin: 10px;
+}
+
+.profavatar{
+    height: 30px;
+    display: inline-block;
+    width: 30px;
+    border-radius: 200px;
+    object-fit: cover;
+}
+
+.cardline{
+    display: inline-block;
+    background-color: #F2F2F2;
+    border-radius: 120px;
+    padding: 4px 12px 2px 8px;
+}
+
+
+.cardname{
+    display: inline-block;
+    margin: -23px 4px 0 10px;
+    vertical-align: middle;
+}
+
+
+.cardpers{
+    height: 35px;
+    display: inline-block;
+    padding: 3px 20px !important;
+    margin-left: 10px;
+    align-items: center;
+
+}
+
+.pers{
+    height: 13px;
+    margin: 11px 0 0 0;
+}
+
+
+.mcard{
+    margin: -6px 0px 0 4px;
+}
+
+.pricecard{
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Urbanist';
+}
+
+.secondline{
+    display: flex;
+    align-items: center;
+    margin: -5px 0 0 10px;
+}
+
+.roomtype{
+    margin-left: 10px;
+    font-family: 'Urbanist';
+    font-size: 15px;
+    color: #8D8D8D;
+}
+
+.cardinf{
+    height: 40px;
+    margin-top: 7px;
+}
+
+.checkin{
+    height: 15px;
+    margin: 0 -3px 0 10px;
+}
+
+
+#mapblock{
+    width: calc(50% - 80px);
+    border-radius: 18px;
+    margin: 40px 50px 40px 0;
+}
+
+ .gm-style-iw-c{
+    max-width: 449px;
+    padding: 0 !important;
+    border-radius: 18px !important;
+    max-height: 653px;
+    min-width: 0px;
+    margin: 0 !important;
+}
+
+.gm-style-iw-d{
+    overflow: auto !important;
+    padding: 0 !important;
+    border-radius: 18px;
+    margin: 0 !important;
+}
+
+.gm-ui-hover-effect{
+    display: none !important;
+}
+
+
+.scard{
+    margin: 7px 0 9px 17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -499,10 +826,32 @@ transition: .2s;
     margin-right: 8px;
 }
 
+.mr12{
+    margin-right: 12px;
+}
 .mr14{
     margin-right: 14px;
 }
 
+.mr40{
+    margin-right: 40px;
+}
+
+.mb0{
+    margin-bottom: 0px;
+}
+
+.ml20{
+    margin-left: 20px;
+}
+
+.ml30{
+    margin-left: 30px;
+}
+
+.mt40{
+    margin-top: 40px;
+}
 .mt60{
     margin-top: 60px;
 }
@@ -536,4 +885,10 @@ transition: .2s;
 }
 
 
+.mw80p{
+    max-width: 80%;
+}
 
+.fs14{
+    font-size: 14px;
+}
