@@ -4,7 +4,6 @@ const mail = document.getElementsByClassName('auth_email')
 const loading = document.getElementById('loading')
 
 
-
 //form handler
 document.getElementById('login').addEventListener('submit', async  (e)=> {
     e.preventDefault()
@@ -24,7 +23,7 @@ document.getElementById('login').addEventListener('submit', async  (e)=> {
             const resp = await respose.json()
             console.log(resp)
             localStorage.setItem('key', JSON.stringify(resp))
-            window.location.href ='/add/room'
+            window.location.href ='/search'
         } else {
             delError()
             loading.style.display = 'none'

@@ -17,6 +17,8 @@ class get {
             return response
         } catch (e) {console.log('Error ' + e)}
     }
+
+    
 }
 
 module.exports = get

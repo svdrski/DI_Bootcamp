@@ -11,6 +11,7 @@ class reg {
     static async Room  (req, res) {
         try{
         let token = req.headers.authorization
+        console.log(token)
         token = JSON.parse(token)
         const decoded = jwt.verify(token, 'roommates')
         const email = decoded.email
