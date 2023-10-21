@@ -40,6 +40,7 @@ router.post('/myrooms', myrooms.posts)
 
 router.get('/search', search.Open )
 router.get('/search/getlist', search.GetList)
+router.get('/find', search.value)
 
 
 

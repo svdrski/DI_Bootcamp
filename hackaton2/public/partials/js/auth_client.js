@@ -3,6 +3,9 @@ if(!key2) {window.location.href = '/login'}
 console.log(key2)
 
 
+
+
+
 getHeader ()
 
 async function getHeader () {
@@ -11,11 +14,11 @@ async function getHeader () {
         method: 'GET',
         headers: {
             'Authorization': `${key2}`,
+            'Content-type': 'application/json'
             }
     })
 
     data  = await data.json()
-
     document.getElementById('profname').innerText = data[0].first_name
 
 }

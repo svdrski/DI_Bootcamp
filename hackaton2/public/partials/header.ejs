@@ -2,7 +2,7 @@
 
 <div class='menuleft'>
 <img class="searchpin" src="/static/pin.svg">
-    <input id='searchinpt' type='text'>
+<form id="searchform"><input id='searchinpt' name="search" type='text'></form>
     <nav>
             <a href="/search">Rooms</a>
     </nav>
@@ -11,7 +11,6 @@
 <div class='menuright'>
    
 
-    <a target="_blank" href="/favorites"> <img src="/static/likeicn.svg"></a>
 
     <a target="_blank" id='myrooms' class='myrooms' href="/myrooms">
         <span style="margin: 0 25px 0 5px;">My rooms</span>
@@ -35,4 +34,14 @@
         localStorage.clear()
         window.location.href = '/login'
             })
+
+
+
+document.getElementById('searchform').addEventListener('submit',(e)=>{
+    e.preventDefault()
+    console.log(e.target.search.value)
+
+    window.location.href = `/search?value=${e.target.search.value}`
+
+} )
 </script>

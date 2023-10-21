@@ -36,19 +36,40 @@ const  coordinates = {lat: 32.0853, lng: 34.781768}
 
    
     
+  const link = window.location.href
 
 
 
 
 
 const getlist = async () => {
-    const response = await fetch ('/search/getlist')
-    const idList = await response.json()
+
+let  idList  = []
+
+    if(link.includes('value')){
+        const index = link.indexOf('=')
+        const req = link.slice(index + 1, 100)
+        console.log(req)
+        const response = await fetch(`/find?value=${req}`)
+        idList = await response.json()
+        document.getElementById('searcharea').innerText = idList[0].city
+        console.log(idList)
+    } else{
+        const response = await fetch ('/search/getlist')
+        idList = await response.json()
+        document.getElementById('searcharea').innerText = 'Israel'
+
+    }
+
 
     for(id of idList) {
-        const response = await fetch(`/roomdata/${id.id}`)
-        const roomdata = await response.json()
 
+            const response = await fetch(`/roomdata/${id.id}`)
+             roomdata = await response.json()
+             console.log(roomdata)
+
+        console.log(roomdata)
+        
         const coords = {lat: parseFloat(roomdata.room.attitude), lng: parseFloat(roomdata.room.longitude)}
 
         console.log(roomdata)

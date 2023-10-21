@@ -11,6 +11,16 @@ class search {
     static async myrooms(email) {
         return await db('rooms').select('id').where({email})
     }
+
+
+    static async find(value){
+
+        if(value) {
+            const searchValue = value.toLowerCase().replace(' ', '')
+            return await db('rooms').select('*').where(db.raw("REPLACE(LOWER(city), ' ', '') LIKE ?", searchValue))
+        }
+    
+    }
 }
 
 module.exports = search
