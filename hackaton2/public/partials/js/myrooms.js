@@ -1,13 +1,13 @@
 const key = localStorage.getItem('key')
 if(!key) {window.location.href = '/login'}
-// console.log(key)
-
-
 
 
 async function printMyRooms(){
 
-   let data = await fetch('/myrooms',{
+    try{
+
+    //fetching all id's of rooms of current user by token
+    let data = await fetch('/myrooms',{
         method: 'POST',
         headers: {
             'Authorization': `${key}`,
@@ -17,18 +17,22 @@ async function printMyRooms(){
     data = await data.json()
 
 
+    //printing all rooms from response to page
     for (item of data) {
 
+            //fetching all data of current room 
             const response = await fetch(`/roomdata/${item.id}`)
             const roomdata = await response.json()
             console.log(roomdata)
-    
+
+            // extracting coordinates from request
             const coords = {lat: parseFloat(roomdata.room.attitude), lng: parseFloat(roomdata.room.longitude)}
     
-            console.log(roomdata)
+            //creating div content
             const room = document.createElement('div')
             room.setAttribute('id', 'roomcard')
             room.innerHTML = `
+            <img class="delimg" id="${item.id}" src="/static/delete.svg">
             <a class='blockhref' target='blanc'  href="/room/${item.id}">
             <img class="cardimg" src="${roomdata.photos[0].url}">
             <div class='cardinf df'>
@@ -51,25 +55,26 @@ async function printMyRooms(){
     
             </div>
             `
-        
+
+            room.addEventListener('click', async ()=>{
+                try{
+                    await fetch(`/myrooms/delete/${item.id}`, {
+                        method:'POST'
+                    }) 
+                    window.location.reload()
+
+                } catch (e) {console.log('Error ' + e)}
+                
+                
+             })
+          
+            //push to page
             document.getElementById('rommscontent').appendChild(room)
-    
-  
-    
     }
 
 
-
-
-
-
+    } catch (e) {console.log('Error ' + e)}
 
 }
 
 printMyRooms()
-
-
-// .then (a => a.json()).then(a => {
-//     console.log(a)
-
-// })

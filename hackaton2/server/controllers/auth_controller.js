@@ -6,20 +6,22 @@ const {json} = require("express");
 const multer  = require('multer')
 const upload = multer({ dest: 'uploads/' })
 const saltRounds = 10
+
+
 class auth {
-    
-    static checktoken (req, res) {
 
-    }
-
+    // render registration page
     static RegPage (req, res) {
         res.render('registration')
     }
     
+    // render login page
     static LogPage (req,res) {
         res.render('login')
     }
     
+
+    // registration control
     static async Registration (req, res) {
         try{
             const {first_name, last_name, email, password1, password2} = req.body
@@ -34,11 +36,15 @@ class auth {
             const mail = await model.CheckEmail(email)
             if (mail.length > 0) { return res.status(410).json('This email is already in use')}
             
+            // generate id
             const id = uuidv4()
+
+            //default profile image
             const imgurl = '/static/user_profile.svg'
             //encrypting password
              bcrypt.hash(password1, saltRounds, (err, cryptPass)=> {
                  if(err) {res.status(500).json('Error ' + err)}
+                 // send data to register in db
                  model.Register(id, first_name, last_name, email, cryptPass, imgurl)
                  res.status(200).json('ok')
             })
@@ -47,7 +53,7 @@ class auth {
     
     
     
-    
+    // login control
     static async Login (req, res) {
         const {email, password} = req.body
         

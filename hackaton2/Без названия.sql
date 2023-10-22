@@ -20,16 +20,24 @@ create table profile_img (id text references rooms(id),
 					 url text not null,
 				      created timestamp default now())
 
+delete  from photos where id = 'd756f6f7-0ce8-417d-a8fc-e612d3584cfb'
+delete  from profile_img where id = 'd756f6f7-0ce8-417d-a8fc-e612d3584cfb'
+delete from rooms where id = 'd756f6f7-0ce8-417d-a8fc-e612d3584cfb'
+
+
+
 
 create table rooms (id varchar(250) PRIMARY KEY not null,
 				   email varchar(250) references users(email),
 				   city varchar(250) not null,
+				   fulladdress text, 
+					size varchar(250),
 				   longitude varchar(250) not null,
 				   attitude varchar(250) not null,
 				   age varchar(250),
 				   availability varchar(250),
 				   title varchar(250) not null,
-				   description varchar(250) not null,
+				   description text not null,
 				   comforts text,
 				   cleanliness varchar(250),
 				   getup varchar(250),
@@ -53,7 +61,4 @@ create table rooms (id varchar(250) PRIMARY KEY not null,
 				   select * from photos where id = '6b61d367-dd29-48fe-b846-56b4b1891ff2'
 				   
 				   SELECT * FROM rooms
-LEFT JOIN photos ON rooms.id = photos.id
-LEFT JOIN profile_img ON rooms.id = profile_img.id
-WHERE rooms.id = '98b14cde-1bac-4cb1-84a0-13f209d31fd7';
 				   

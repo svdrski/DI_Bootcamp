@@ -858,6 +858,18 @@ transition: .2s;
 }
 
 
+.delimg{
+    position: absolute;
+    margin: 14px 0 0 226px;
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.delimg:hover{
+    cursor: pointer;
+}
+
 
 
 

@@ -48,9 +48,9 @@ async function  printError (message, status) {
         await delError()
         err.style.display = 'flex'
         err.innerHTML = `
-    <img src="/static/err.svg" style="height: 20px; margin-right:10px;">
-    <span>${message}</span>
-    `
+            <img src="/static/err.svg" style="height: 20px; margin-right:10px;">
+            <span>${message}</span>
+        `
         if(status === 410) {
             mail[0].style.border = '1px solid #EC3F3F'
         }
