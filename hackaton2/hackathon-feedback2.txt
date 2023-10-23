@@ -1,0 +1,15 @@
+Website to find room to live.
+Functional LOGIN AND REGISTER + verification of details (messages for wrong pass ect).
+Used JWT.
+Used external map api.
+Can submit new room with tags, sort of house/apartment.
+Can submit dates and household information.
+Photo upload.
+Used EJS.
+Unique ID for each post.
+Clean UI.
+EJS front end.
+Very impressive project!
+I think this project shows how far you have progressed in the course.
+Your work is clean and functional. 
+  Very good!
