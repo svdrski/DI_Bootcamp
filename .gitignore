@@ -2,24 +2,21 @@
 **package-lock.json
 **/*.jpg# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Игнорирование папки node_modules (где хранятся зависимости Node.js)
+node_modules/
 
-# testing
-/coverage
+# Игнорирование файлов, связанных с npm (package-lock.json)
+package-lock.json
 
-# production
-/build
+# Игнорирование папки, в которую устанавливаются зависимости при развертывании
+# на хостинге (обычно папка "build" или "dist")
+build/
+dist/
 
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Игнорирование изображений и других медиафайлов (в зависимости от расширений)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
+*.ico
