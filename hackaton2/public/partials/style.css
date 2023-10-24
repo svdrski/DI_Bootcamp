@@ -135,9 +135,10 @@ nav a {
 }
 
 #authImg{
-    background-image: url('/static/room11.jpg');
+    background-image: url('/static/front.jpg');
     background-position: center;
     height: calc(100vh - 60px);
+    background-size: cover;
     max-width: 50%;
     width: 50%;
     min-width: 400px;

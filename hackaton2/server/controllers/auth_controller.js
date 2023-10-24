@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt')
 const { v4: uuidv4 } = require('uuid');
 const jwt = require('jsonwebtoken');
 const {json} = require("express");
-const multer  = require('multer')
+const multer  = require('multer');
 const upload = multer({ dest: 'uploads/' })
 const saltRounds = 10
 

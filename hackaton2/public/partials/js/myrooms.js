@@ -56,20 +56,21 @@ async function printMyRooms(){
             </div>
             `
 
-            room.addEventListener('click', async ()=>{
+            
+          
+            //push to page
+            document.getElementById('rommscontent').appendChild(room)
+
+            document.getElementById(item.id).addEventListener('click', async ()=>{
                 try{
                     await fetch(`/myrooms/delete/${item.id}`, {
                         method:'POST'
                     }) 
                     window.location.reload()
-
                 } catch (e) {console.log('Error ' + e)}
                 
                 
              })
-          
-            //push to page
-            document.getElementById('rommscontent').appendChild(room)
     }
 
 

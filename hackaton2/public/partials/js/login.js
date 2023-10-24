@@ -34,7 +34,7 @@ document.getElementById('login').addEventListener('submit', async  (e)=> {
             //save jwt key to local storage
             localStorage.setItem('key', JSON.stringify(resp))
             //redirect to search page
-            window.location.href ='/search'
+            window.location.href ='/add/room'
         } else {
             // if error print error
             delError()
