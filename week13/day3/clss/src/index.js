@@ -6,6 +6,7 @@ import Car from './Car'
 import Actor from './Actor';
 import Users from './users';
 import Sunrise from './Sunrise';
+import Greeting from './Greeting';
 import Fragment from './fragment';
 import reportWebVitals from './reportWebVitals';
 
@@ -30,11 +31,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <Fragment /> */}
+    <Greeting/>
     {/* <Users /> */}
     {/* <Sunrise/> */}
     {/* <Actor/> */}
     {/* <Car colors={carColors}/> */}
-    <App/>
+    {/* <App/> */}
   </React.StrictMode>
 );
 
