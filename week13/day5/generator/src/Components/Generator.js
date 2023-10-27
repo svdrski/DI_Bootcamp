@@ -12,7 +12,7 @@ export default function Generator () {
     //random number
     const getrandom = () => { return Math.floor(Math.random() * quotes.length) + 1}
 
-    //generate random new number and setting new color and quote
+    //generate random new number and setting new color and quote value
     function generate () {
         let value
         while((value = getrandom()) ===  currentQuote) {}
@@ -25,7 +25,6 @@ export default function Generator () {
         let num = () => {return Math.floor(Math.random() * 256) + 1} 
         return `rgb(${num()}, ${num()}, ${num()})`
     }
-
 
     // when currentQuote changed => update color and quote on the state and render it
     useEffect(()=> {
