@@ -12,6 +12,8 @@ function Phone () {
         setColor('blue')
     }
 
+  
+
     return(
         <>
         <h1>My Phone is a {brand}</h1>

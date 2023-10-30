@@ -3,18 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Events from './Components/Events';
-import Phone from './Components/Phone';
-import Color from './Components/Color';
+import ErrorBoundary from './ErrorBoundary';
+import Form from './Form';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <>
-      {/* <Events />
-    <App />
-    <Phone/> */}
-    <Color/>
-  </>
+  <ErrorBoundary>
+    {/* <App /> */}
+<Form/>
+  </ErrorBoundary>
 );
 
 // If you want to start measuring performance in your app, pass a function
