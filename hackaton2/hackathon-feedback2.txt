@@ -1,15 +1,1 @@
-Website to find room to live.
-Functional LOGIN AND REGISTER + verification of details (messages for wrong pass ect).
-Used JWT.
-Used external map api.
-Can submit new room with tags, sort of house/apartment.
-Can submit dates and household information.
-Photo upload.
-Used EJS.
-Unique ID for each post.
-Clean UI.
-EJS front end.
-Very impressive project!
-I think this project shows how far you have progressed in the course.
-Your work is clean and functional. 
-  Very good!
+I'm thrilled to provide feedback on your "Website to find a room to live" project. Your work is truly impressive, with a comprehensive set of features that exhibit your strong development skills. Your project includes functional login and registration with detailed authentication, using JWT for secure user management. The integration of an external map API adds a valuable dimension to your application. The ability to submit new room listings with tags, information about the type of housing, dates, household details, and photo uploads demonstrates a thorough understanding of user needs and an eye for detail. Your use of EJS for the front end, unique IDs for each post, and a clean and user-friendly UI make your project outstanding. I would rate your work a remarkable 9 out of 10, reflecting your exceptional abilities and promising potential for future projects. Keep up the excellent work, and continue to build upon this strong foundation!
