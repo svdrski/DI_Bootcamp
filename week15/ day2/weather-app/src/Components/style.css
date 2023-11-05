@@ -1,0 +1,39 @@
+.header{
+    background-color: #d9f4ff;
+    border-radius: 20px;
+    margin: 2%;
+        display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    align-items: center;
+}
+
+span {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+/* .search{
+    margin-left: 30px;
+    height: 40px;
+    width: 70%;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    padding: 0 20px;
+} */
+
+.search:focus {
+    outline: none;
+;
+}
+
+.link{
+    margin: 0 10px;
+    text-decoration: none;
+    color: #00628c;
+    font-size: 18px;
+    font-weight: 600;
+}
+

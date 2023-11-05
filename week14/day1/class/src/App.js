@@ -47,9 +47,25 @@ const listCars = [
 
 
 
+
 class App extends React.Component {
 
  
+  
+
+  function getAlphabet() {
+    return ['a', 'b'];
+  }
+  
+  // no array destructuring
+  let itemOne = getAlphabet()[0];
+  let itemTwo = getAlphabet()[1];
+  
+  // array destructuring
+  const [itemOne, itemTwo] = getAlphabet();
+  
+
+
   constructor () {
     super()
     this.state = {
