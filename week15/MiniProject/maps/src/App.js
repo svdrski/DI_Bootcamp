@@ -21,6 +21,6 @@ function App(props) {
   );
 }
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyANmJ-N2VGGhuGqlYi2GuPKTD6vgTy0nP8' 
+  apiKey: '' 
 })(App);
 
