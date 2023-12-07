@@ -1,148 +1,86 @@
 #1
-# keys = ['Ten', 'Twenty', 'Thirty']
-# values = [10, 20, 30]
-#
-# print(dict(zip(keys,values)))
+my_fav_numbers = {9,1,3,6,7}
+my_fav_numbers.update({5,8})
 
+my_fav_numbers.remove(9)
+friend_fav_numbers = {2,4,66,44,631,5,3}
+
+our_fav_numbers = my_fav_numbers.union(friend_fav_numbers)
+# our_fav_numbers = my_fav_numbers | friend_fav_numbers
+print(our_fav_numbers)
 
 #2
-# family = {"rick": 43, 'beth': 13, 'morty': 5, 'summer': 8, 'gog': 2}
-# def calculate(dict):
-#     sum= 0
-#     for item in family.values():
-#         if item < 3:
-#             pass
-#         elif 3 < item < 12:
-#             sum += 10
-#         else: sum += 15
-#     return sum
-#
-# family = {}
-# while True:
-#   value = input('Enter name and age with comma or calc to result')
-#   if value == 'calc': print(calculate(family)) ; break
-#   value = list(value.split(','))
-#   name, age = value
-#   family.update({name: int(age)})
-
+#No, only create new
 
 #3
-# brand ={
-#     "name": "Zara",
-#     "creation_date": 1975,
-#     "creator_name": "Amancio Ortega Gaona",
-#     "type_of_clothes": ['men', 'women', 'children', 'home'],
-#     "international_competitors": ['Gap', 'H&M', 'Benetton'],
-#     'number_stores': 7000,
-#     'major_color': {
-#         'France': 'blue',
-#         'Spain': 'red',
-#         'US': ['pink', 'green']
-#     }
+# basket = ["Banana", "Apples", "Oranges", "Blueberries"];
 #
-# }
+# basket.remove('Banana')
+# basket.remove('Blueberries')
 #
-# brand['number_stores'] = 2
-# print(f'{brand['name']} clients are ????')
-# brand['country_creation'] = 'Spain'
-# if 'international_competitors' in brand.keys(): brand['international_competitors'].append('Desigual')
-# del brand['creation_date']
-# print(brand['international_competitors'][-1])
-# print(brand['major_color']['US'])
-# print(len(brand.values()))
-# print(brand.keys())
-# more_on_zara = {
-#     'creation_date': 1975,
-#     'number_stores': 10000
-# }
-# brand.update(more_on_zara)
-# print(brand['number_stores'])
-
+# basket.append('Kiwi')
+# basket.insert(0, 'Apples')
+#
+# apples = basket.count("Apples")
+# print(apples)
+#
+# basket.clear()
+# print(basket)
 
 #4
-# users = ["Mickey","Minnie","Donald","Ariel","Pluto"]
-#
-# print({item: i for i,item  in enumerate(users)})
-# print({i: item for  i, item in enumerate(users)})
-# print({item: i for i,item  in enumerate(sorted(users))})
-# print({item: i for i,item  in enumerate(users) if 'i' in item})
-# print({item: i for i,item  in enumerate(users) if item[0] == 'P' or item[0] == 'M'})
-
+# ints = list(range(2, 6))
+# floats = ints.copy()
+# for i in range(len(floats)):
+#     floats[i] -= 0.5
+# result = sorted(ints + floats)
+# print(result)
 
 #5
-# import  random
-# def rand(value):
-#     gen_random = random.randint(0, 100)
-#     print('Success') if value == gen_random else print(value, gen_random)
-# rand(33)
-
+# for i in range(21):
+#  if i % 2 == 0:  print(i)
 
 #6
-# import  random
-# def get_random_temp(season):
-#     diapason = -10, 40
-#     if season == 'winter' : diapason = -10, 10
-#     if season == 'spring' : diapason = 0, 16
-#     if season == 'summer' : diapason = 15, 40
-#     if season == 'autumn' : diapason = 5, 1
-#     return random.randint(diapason[0], diapason[1])
-#
-# def main():
-#     season = input('Enter season - summer’, ‘autumn’ ‘winter’, ‘spring’')
-#     rand_temp = get_random_temp(season)
-#     print(f'The temperature right now is {float(rand_temp)} degrees Celsius')
-#     if rand_temp < 0:
-#         print('Brrr, that’s freezing! Wear some extra layers today')
-#     elif 0 < rand_temp < 16:
-#         print('Quite chilly! Don’t forget your coat')
-#     elif 16 < rand_temp <23:
-#         print('between 16 and 23')
-#     elif 23 < rand_temp < 32:
-#         print('between 24 and 32')
-#     elif 32 < rand_temp < 40:
-#         print('between 32 and 40')
-# main()
-
+# while True:
+#     myname = 'Hleb'
+#     name = input( 'Enter name')
+#     if name.lower() == myname.lower(): print('Win') ; break
 
 #7
-data = [
-    {
-        "question": "What is Baby Yoda's real name?",
-        "answer": "Grogu"
-    },
-    {
-        "question": "Where did Obi-Wan take Luke after his birth?",
-        "answer": "Tatooine"
-    },
-    {
-        "question": "What year did the first Star Wars movie come out?",
-        "answer": "1977"
-    },
-    {
-        "question": "Who built C-3PO?",
-        "answer": "Anakin Skywalker"
-    },
-    {
-        "question": "Anakin Skywalker grew up to be who?",
-        "answer": "Darth Vader"
-    },
-    {
-        "question": "What species is Chewbacca?",
-        "answer": "Wookiee"
-    }
-]
+# fruits = list(input('Enter fruits with space').lower().split(' '))
+# ask = input('Enter one')
+# message = 'You chose one of your favorite fruits! Enjoy!' if ask.lower() in fruits else 'You chose a new fruit. I hope you enjoy'
+# print(message)
 
-correct = 0
-wrong = 0
-wrongList = []
+#8
+# lst = []
+# while True:
+#     topping = input('Enter toppint or quit')
+#     if not topping  == 'quit':
+#         lst.append(topping)
+#         print(topping, 'added')
+#     else:  print('Price', 10 + 2.5 * len(lst)) ; break
 
-for item in data:
-    if wrong >= 3:
-        print('You lose','Correct', correct, 'Wrong', wrong, wrongList )
-    answer = input(item['question'])
-    if answer == item['answer']:
-        correct += 1
-    else:
-        wrong += 1
-        wrongList.append(item)
-    print('Correct', correct, 'Wrong', wrong)
+#9
+# sum = 0
+# while True:
+#     age = input('Enter age, or calc to get results')
+#     if age == 'calc':
+#         print('Sum', sum)
+#         break
+#     age = int(age)
+#     if 3 < age < 12:
+#         sum += 10
+#     elif age > 12:
+#         sum +=15
+
+#10
+sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", "Pastrami sandwich", "Egg sandwich", "Chicken sandwich", "Pastrami sandwich"]
+finished_sandwiches = []
+
+while 'Pastrami sandwich' in sandwich_orders:
+    sandwich_orders.remove('Pastrami sandwich')
+
+while len(sandwich_orders) > 0:
+    active_sandwitch = sandwich_orders.pop()
+    finished_sandwiches.append(active_sandwitch)
+    print('I made your ', active_sandwitch)
