@@ -13,13 +13,10 @@ def display_board(board):
 board = [list(' ' for i in range(3)) for x in range(3)]
 def checkWinner(board, current_player):
     for i in range(3):
-        if all(board[i][x] == current_player for x in range(3)):
-            return True
-        if all(board[x][i] == current_player for x in range(3)):
-            return True
-        if all(board[i][i] == current_player for i in range(3)):
-            return True
-        if all(board[i][2 - i] == current_player for i in range(3)):
+        if (all(board[i][x] == current_player for x in range(3)) or\
+                all(board[x][i] == current_player for x in range(3))) or\
+                    all(board[i][i] == current_player for i in range(3)) or\
+                        all(board[i][2 - i] == current_player for i in range(3)):
             return True
     return False
 
