@@ -74,7 +74,7 @@ class Zoo:
         self.animals = [item for item in self.animals if item != animal_sold]
 
     def sort_animals(self):
-        self.animals = sorted(self.animals)
+        self.animals.sort()
         result = []
         for i in self.animals:
           arr = [x for x in self.animals if x[0] == i[0]]
