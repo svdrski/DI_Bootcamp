@@ -1,0 +1,8 @@
+Name: f, Age: 3
+Strength: 7
+Dexterity: 9
+Constitution: 8
+Intelligence: 9
+Wisdom: 5
+Charisma: 11
+
