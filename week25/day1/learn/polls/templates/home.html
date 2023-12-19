@@ -1,0 +1,9 @@
+    {% block content %}
+        <h1>
+        <img alt="image_profile_{{user.first_name}}_{{user.last_name}}"
+        src={{user.imageprofile.image}} width=30>
+        Hello {{user.first_name}} {{user.last_name}}
+        </h1>
+
+        <h2>Welcome to my website</h2> 
+    {% endblock content %}
