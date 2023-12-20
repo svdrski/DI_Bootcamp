@@ -13,9 +13,15 @@ from django.http import HttpResponse
 @api_view(['GET', 'POST'])
 def student_list(request):
     if request.method == 'GET':
-        sudents = Student.objects.all()
-        serial = StudentSerializer(sudents, many=True)
-        return HttpResponse(serial.data)
+        date_joined = request.GET.get('date_joined')
+        if date_joined:
+            students = Student.objects.filter(date_joined=date_joined)
+            serial = StudentSerializer(students, many=True)
+            return Response(serial.data)
+        else:
+            sudents = Student.objects.all()
+            serial = StudentSerializer(sudents, many=True)
+            return HttpResponse(serial.data)
 
     if request.method == 'POST':
         serial = StudentSerializer(data=request.data)
