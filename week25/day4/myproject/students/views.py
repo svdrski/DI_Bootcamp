@@ -8,6 +8,18 @@ from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
+from rest_framework.generics import GenericAPIView
+from .mixins import StudentOperationsMixin
+
+
+
+class StudentList(StudentOperationsMixin, GenericAPIView):
+    def get(self, request, *args, **kwargs):
+        return self.list(request, *args, **kwargs)
+
+class StudentDetail(StudentOperationsMixin, GenericAPIView):
+    def get(self, request, *args, **kwargs):
+        return self.retrieve(request, *args, **kwargs)
 
 
 @api_view(['GET', 'POST'])
@@ -21,7 +33,7 @@ def student_list(request):
         else:
             sudents = Student.objects.all()
             serial = StudentSerializer(sudents, many=True)
-            return HttpResponse(serial.data)
+            return Response(serial.data)
 
     if request.method == 'POST':
         serial = StudentSerializer(data=request.data)
