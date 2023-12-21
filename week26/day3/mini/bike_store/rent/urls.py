@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import RentalList, VehicleList, VehicleAdd, RentalDetail, CustomerList, CustomerAdd,VehicleDetail, RentalStationList, RentalStationAdd,RentalStationDetail,StationDistribution, DistributeVehicles
+from .views import RentalList, VehicleList, VehicleAdd, RentalDetail, CustomerList, CustomerAdd,VehicleDetail, RentalStationList, RentalStationAdd,RentalStationDetail,StationDistribution, DistributeVehicles, MonthlyStats, PopularStation, PopularVehicleType
 
 urlpatterns = [
     path('rent/rental/', RentalList.as_view(), name='rental-list'),
@@ -18,4 +18,9 @@ urlpatterns = [
     #
     path('rent/station/distribution/', StationDistribution.as_view(), name='station-distribution'),
     path('rent/station/distribute/', DistributeVehicles.as_view(), name='distribute-vehicles'),
+
+
+    path('rent/stats/monthly/', MonthlyStats.as_view(), name='monthly_stats'),
+    path('rent/stats/popular_station/', PopularStation.as_view(), name='popular_station'),
+    path('rent/stats/popular_vehicle_type/', PopularVehicleType.as_view(), name='popular_vehicle_type'),
 ]

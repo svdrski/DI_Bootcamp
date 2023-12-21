@@ -57,3 +57,10 @@ class VehicleAtRentalStation(models.Model):
     departure_date = models.DateField(null=True, blank=True)
     vehicle = models.ForeignKey(Vehicle, on_delete=models.CASCADE)
     station = models.ForeignKey(RentalStation, on_delete=models.CASCADE)
+
+
+
+
+
+
+

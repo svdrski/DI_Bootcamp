@@ -151,3 +151,48 @@ class DistributeVehicles(APIView):
                 vehicle.save()
 
         return Response({"message": "Vehicles distributed successfully"})
+
+
+
+from django.db.models.functions import TruncMonth
+
+
+class MonthlyStats(APIView):
+    def get(self, request):
+        start_date = request.query_params.get('start_date', None)
+        end_date = request.query_params.get('end_date', None)
+        queryset = Rental.objects.all()
+        if start_date and end_date:
+            queryset = queryset.filter(rental_date__range=(start_date, end_date))
+        monthly_stats = queryset.annotate(
+            month=TruncMonth('rental_date')
+        ).values('month').annotate(rental_count=Count('id')).order_by('month')
+        result = {
+            str(stat['month']): stat['rental_count']
+            for stat in monthly_stats
+        }
+        return Response(result)
+class PopularStation(APIView):
+    def get(self, request):
+        station_stats = RentalStation.objects.annotate(
+            rental_count=Count('vehicleatrentalstation__id')
+        ).values('name', 'rental_count').order_by('-rental_count')
+        result = {
+            stat['name']: stat['rental_count']
+            for stat in station_stats
+        }
+        return Response(result)
+
+
+class PopularVehicleType(APIView):
+    def get(self, request):
+        vehicle_type_stats = Vehicle.objects.values(
+            'vehicle_type__name'
+        ).annotate(rental_count=Count('rental__id')).order_by('-rental_count')
+
+        result = {
+            stat['vehicle_type__name']: stat['rental_count']
+            for stat in vehicle_type_stats
+        }
+
+        return Response(result)
