@@ -29,7 +29,7 @@ function anotherFunChallenge(input) {
         let z = i + 3; //n
 
     }
-    for (let j = 0; j < input; j++) { 
+    for (let j = 0; j < input; j++) {
         let p = j * 2; //n
         let q = j * 2; //n
     }
